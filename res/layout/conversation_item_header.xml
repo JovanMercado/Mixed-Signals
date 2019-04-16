@@ -12,12 +12,13 @@
 
     <TextView
         android:id="@+id/text"
+        style="@style/Signal.Text.Caption"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/manrope_medium"
         android:gravity="center"
-        style="@style/Signal.Text.Caption"
-        android:textColor="?conversation_item_update_text_color"
         android:textAllCaps="true"
+        android:textColor="?conversation_item_update_text_color"
         tools:text="March 1, 2015" />
 
 </LinearLayout>

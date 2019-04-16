@@ -27,12 +27,15 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.PorterDuff.Mode;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.Icon;
 import android.hardware.Camera;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -42,10 +45,13 @@ import android.os.Vibrator;
 import android.provider.Browser;
 import android.provider.ContactsContract;
 import android.provider.Telephony;
+import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.content.pm.ShortcutInfoCompat;
 import android.support.v4.content.pm.ShortcutManagerCompat;
+import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v4.graphics.drawable.IconCompat;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.WindowCompat;
@@ -56,6 +62,7 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Pair;
+import android.util.TypedValue;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -70,6 +77,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.annimon.stream.Stream;
 import com.google.android.gms.location.places.ui.PlacePicker;
@@ -333,6 +341,7 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
 
     fragment = initFragment(R.id.fragment_content, new ConversationFragment(), dynamicLanguage.getCurrentLocale());
 
+
     initializeReceivers();
     initializeActionBar();
     initializeViews();
@@ -416,7 +425,7 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
     composeText.setTransport(sendButton.getSelectedTransport());
 
     titleView.setTitle(glideRequests, recipient);
-    setActionBarColor(recipient.getColor());
+    //setActionBarColor(recipient.getColor());
     setBlockedUserState(recipient, isSecureText, isDefaultSms);
     setGroupShareProfileReminder(recipient);
     calculateCharactersRemaining();
@@ -699,6 +708,20 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
         return true;
       }
     });
+
+      TypedValue typedValue = new TypedValue();
+      Resources.Theme theme = this.getTheme();
+      theme.resolveAttribute(R.attr.actionMenuTextColor, typedValue, true);
+      @ColorInt int colorParsed = typedValue.data;
+
+    for (int i =0; i < menu.size(); i++ ) {
+      MenuItem menuItem = menu.getItem(i);
+
+      Drawable icon = menuItem.getIcon();
+      if (icon != null) {
+        DrawableCompat.setTint(icon,colorParsed);
+      }
+    }
 
     super.onPrepareOptionsMenu(menu);
     return true;
@@ -1549,6 +1572,7 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
     ActionBar supportActionBar = getSupportActionBar();
     if (supportActionBar == null) throw new AssertionError();
 
+
     supportActionBar.setDisplayHomeAsUpEnabled(false);
     supportActionBar.setCustomView(R.layout.conversation_title_view);
     supportActionBar.setDisplayShowCustomEnabled(true);
@@ -1635,7 +1659,7 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
       titleView.setTitle(glideRequests, recipient);
       titleView.setVerified(identityRecords.isVerified());
       setBlockedUserState(recipient, isSecureText, isDefaultSms);
-      setActionBarColor(recipient.getColor());
+      //setActionBarColor(recipient.getColor());
       setGroupShareProfileReminder(recipient);
       updateReminders(recipient.hasSeenInviteReminder());
       updateDefaultSubscriptionId(recipient.getDefaultSubscriptionId());

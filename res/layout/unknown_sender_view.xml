@@ -30,14 +30,16 @@
                    android:src="@drawable/ic_block_white_24dp"
                    android:tint="@color/signal_primary"/>
 
-        <TextView android:layout_marginStart="15dp"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:text="@string/unknown_sender_view__block"
-                  android:textAllCaps="true"
-                  android:textStyle="bold"
-                  android:textColor="@color/signal_primary"
-                  android:textSize="14sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/manrope_medium"
+            android:text="@string/unknown_sender_view__block"
+            android:textAllCaps="true"
+            android:textColor="@color/signal_primary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -54,14 +56,16 @@
                    android:src="@drawable/ic_person_add_white_24dp"
                    android:tint="@color/signal_primary"/>
 
-        <TextView android:layout_marginStart="15dp"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:text="@string/unknown_sender_view__add_to_contacts"
-                  android:textAllCaps="true"
-                  android:textStyle="bold"
-                  android:textColor="@color/signal_primary"
-                  android:textSize="14sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/manrope_medium"
+            android:text="@string/unknown_sender_view__add_to_contacts"
+            android:textAllCaps="true"
+            android:textColor="@color/signal_primary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -78,14 +82,16 @@
                    android:src="@drawable/ic_face_white_24dp"
                    android:tint="@color/signal_primary"/>
 
-        <TextView android:layout_marginStart="15dp"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:text="@string/unknown_sender_view__don_t_add_but_make_my_profile_visible"
-                  android:textAllCaps="true"
-                  android:textStyle="bold"
-                  android:textColor="@color/signal_primary"
-                  android:textSize="14sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/manrope_medium"
+            android:text="@string/unknown_sender_view__don_t_add_but_make_my_profile_visible"
+            android:textAllCaps="true"
+            android:textColor="@color/signal_primary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 

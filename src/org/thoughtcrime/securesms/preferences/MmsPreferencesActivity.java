@@ -16,13 +16,20 @@
  */
 package org.thoughtcrime.securesms.preferences;
 
+import android.content.res.Resources;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.annotation.ColorInt;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.graphics.drawable.DrawableCompat;
+import android.util.TypedValue;
 import android.view.MenuItem;
 
 import org.thoughtcrime.securesms.PassphraseRequiredActionBarActivity;
+import org.thoughtcrime.securesms.R;
 import org.thoughtcrime.securesms.util.DynamicLanguage;
 import org.thoughtcrime.securesms.util.DynamicTheme;
 
@@ -41,7 +48,9 @@ public class MmsPreferencesActivity extends PassphraseRequiredActionBarActivity 
   protected void onCreate(Bundle icicle, boolean ready) {
     assert getSupportActionBar() != null;
     this.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+    final Drawable upArrow = getResources().getDrawable(R.drawable.abc_ic_ab_back_material, this.getTheme());
+    upArrow.setColorFilter(getResources().getColor(R.color.black, this.getTheme()), PorterDuff.Mode.SRC_ATOP);
+    this.getSupportActionBar().setHomeAsUpIndicator(upArrow);
     Fragment fragment = new MmsPreferencesFragment();
     FragmentManager fragmentManager = getSupportFragmentManager();
     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();

@@ -58,8 +58,8 @@ public class ConversationListItem extends RelativeLayout
   @SuppressWarnings("unused")
   private final static String TAG = ConversationListItem.class.getSimpleName();
 
-  private final static Typeface  BOLD_TYPEFACE  = Typeface.create("sans-serif-medium", Typeface.NORMAL);
-  private final static Typeface  LIGHT_TYPEFACE = Typeface.create("sans-serif", Typeface.NORMAL);
+  private final static Typeface  BOLD_TYPEFACE  = Typeface.create("product_sans_bold", Typeface.NORMAL);
+  private final static Typeface  LIGHT_TYPEFACE = Typeface.create("manrope_medium", Typeface.NORMAL);
 
   private Set<Long>           selectedThreads;
   private Recipient           recipient;

@@ -37,23 +37,25 @@
 
         <TextView
             android:id="@+id/mediapicker_folder_item_title"
+            style="@style/Signal.Text.Preview"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginEnd="6dp"
-            android:maxLines="1"
+            android:layout_weight="1"
             android:ellipsize="end"
-            style="@style/Signal.Text.Preview"
+            android:fontFamily="@font/manrope_medium"
+            android:maxLines="1"
             android:textColor="@color/core_white"
-            tools:text="Daily Bugle"/>
+            tools:text="Daily Bugle" />
 
         <TextView
             android:id="@+id/mediapicker_folder_item_count"
+            style="@style/Signal.Text.Preview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/Signal.Text.Preview"
+            android:fontFamily="@font/manrope_medium"
             android:textColor="@color/core_white"
-            tools:text="122"/>
+            tools:text="122" />
 
     </LinearLayout>
 

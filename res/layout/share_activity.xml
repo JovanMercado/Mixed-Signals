@@ -21,14 +21,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-            <TextView android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:text="@string/ShareActivity_share_with"
-                      android:textColor="@color/white"
-                      android:textSize="20sp"
-                      android:layout_alignParentStart="true"
-                      android:layout_centerVertical="true"
-                      android:layout_toStartOf="@+id/search_action"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/search_action"
+                android:fontFamily="@font/manrope_medium"
+                android:text="@string/ShareActivity_share_with"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <ImageView android:id="@+id/search_action"
                        android:layout_width="wrap_content"

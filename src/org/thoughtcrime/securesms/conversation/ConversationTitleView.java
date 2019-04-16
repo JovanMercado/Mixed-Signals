@@ -148,6 +148,7 @@ public class ConversationTitleView extends RelativeLayout {
     else                                    this.subtitle.setText(recipient.getAddress().serialize());
 
     this.subtitle.setVisibility(View.VISIBLE);
+    //this.subtitle.setTextColor(getResources().getColor(R.color.action_mode_status_bar));
     this.subtitleContainer.setVisibility(VISIBLE);
   }
 }

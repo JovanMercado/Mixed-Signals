@@ -22,13 +22,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <EditText android:id="@+id/old_passphrase"
-                          android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
-                          android:inputType="textPassword"
-                          android:layout_marginBottom="10dip"
-                          android:hint="@string/change_passphrase_activity__old_passphrase"
-                          android:singleLine="true"/>
+                <EditText
+                    android:id="@+id/old_passphrase"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:fontFamily="@font/manrope_medium"
+                    android:hint="@string/change_passphrase_activity__old_passphrase"
+                    android:inputType="textPassword"
+                    android:singleLine="true" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -36,12 +38,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <EditText android:id="@+id/new_passphrase"
-                          android:layout_width="fill_parent"
-                          android:layout_height="wrap_content"
-                          android:inputType="textPassword"
-                          android:hint="@string/change_passphrase_activity__new_passphrase"
-                          android:singleLine="true"/>
+                <EditText
+                    android:id="@+id/new_passphrase"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/manrope_medium"
+                    android:hint="@string/change_passphrase_activity__new_passphrase"
+                    android:inputType="textPassword"
+                    android:singleLine="true" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -49,12 +53,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <EditText android:id="@+id/repeat_passphrase"
-                          android:layout_width="fill_parent"
-                          android:layout_height="wrap_content"
-                          android:inputType="textPassword"
-                          android:hint="@string/change_passphrase_activity__repeat_new_passphrase"
-                          android:singleLine="true" />
+                <EditText
+                    android:id="@+id/repeat_passphrase"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/manrope_medium"
+                    android:hint="@string/change_passphrase_activity__repeat_new_passphrase"
+                    android:inputType="textPassword"
+                    android:singleLine="true" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -63,20 +69,24 @@
                           android:layout_height="wrap_content"
                           android:layout_marginTop="30dp">
 
-                <Button android:id="@+id/cancel_button"
-                        android:text="@android:string/cancel"
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="7dp"
-                        android:textAppearance="?android:attr/textAppearanceMedium"/>
-                
-                <Button android:id="@+id/ok_button"
-                        android:text="@android:string/ok"
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"/>                
+                <Button
+                    android:id="@+id/cancel_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="7dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/manrope_medium"
+                    android:text="@android:string/cancel"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Button
+                    android:id="@+id/ok_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/manrope_medium"
+                    android:text="@android:string/ok"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
             </LinearLayout>                        
         </LinearLayout>
     </FrameLayout>

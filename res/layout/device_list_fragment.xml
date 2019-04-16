@@ -20,18 +20,20 @@
         </ProgressBar>
     </LinearLayout>
 
-    <TextView android:id="@+id/empty"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:layout_gravity="center|center_vertical"
-              android:gravity="center|center_vertical"
-              android:textSize="20sp"
-              android:visibility="gone"
-              android:text="@string/device_list_fragment__no_devices_linked"
-              android:paddingStart="16dip"
-              android:paddingEnd="16dip"
-              android:layout_weight="1"
-              tools:visibility="visible"/>
+    <TextView
+        android:id="@+id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center|center_vertical"
+        android:layout_weight="1"
+        android:fontFamily="@font/manrope_medium"
+        android:gravity="center|center_vertical"
+        android:paddingStart="16dip"
+        android:paddingEnd="16dip"
+        android:text="@string/device_list_fragment__no_devices_linked"
+        android:textSize="20sp"
+        android:visibility="gone"
+        tools:visibility="visible" />
 
     <ListView android:id="@id/android:list"
               android:layout_width="match_parent"

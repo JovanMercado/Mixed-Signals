@@ -20,12 +20,14 @@
                       android:visibility="visible"
                       android:orientation="vertical">
 
-                <TextView style="@style/Registration.BigLabel"
-                          android:layout_width="fill_parent"
-                          android:layout_marginBottom="16dip"
-                          android:layout_marginTop="16dip"
-                          android:gravity="center"
-                          android:text="@string/database_upgrade_activity__updating_database"/>
+            <TextView
+                style="@style/Registration.BigLabel"
+                android:layout_width="fill_parent"
+                android:layout_marginTop="16dip"
+                android:layout_marginBottom="16dip"
+                android:fontFamily="@font/manrope_medium"
+                android:gravity="center"
+                android:text="@string/database_upgrade_activity__updating_database" />
 
                 <ProgressBar android:id="@+id/indeterminate_progress"
                              android:layout_width="wrap_content"

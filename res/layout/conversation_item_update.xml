@@ -34,6 +34,7 @@
             style="@style/Signal.Text.Caption"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/manrope_medium"
             android:textAllCaps="true"
             android:textColor="?conversation_item_update_text_color"
             tools:text="1 hour" />
@@ -54,6 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:autoLink="all"
+            android:fontFamily="@font/manrope_medium"
             android:gravity="center"
             android:linksClickable="true"
             android:textColor="?attr/conversation_item_update_text_color"
@@ -67,6 +69,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="6dp"
             android:autoLink="none"
+            android:fontFamily="@font/manrope_medium"
             android:gravity="center"
             android:linksClickable="false"
             android:minWidth="15sp"

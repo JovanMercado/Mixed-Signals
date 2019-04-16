@@ -68,10 +68,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:fontFamily="@font/manrope_medium"
+            android:gravity="center"
             android:textColor="@color/core_white"
             android:textSize="14dp"
-            android:gravity="center"
-            tools:text="3"/>
+            tools:text="3" />
 
     </FrameLayout>
 

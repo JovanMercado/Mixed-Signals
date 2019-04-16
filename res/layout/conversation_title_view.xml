@@ -8,32 +8,34 @@
         android:layout_gravity="center_vertical"
         android:gravity="center_vertical">
 
-    <ImageView android:id="@+id/up_button"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:src="@drawable/ic_arrow_back_white_24dp"
-               android:clickable="true"
-               android:paddingEnd="12dp"
-               android:layout_marginEnd="12dp"
-               android:layout_alignParentStart="true"
-               android:layout_centerVertical="true"
-               android:background="?selectableItemBackgroundBorderless"
-               android:visibility="visible"/>
+    <ImageView
+        android:id="@+id/up_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="12dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:paddingEnd="12dp"
+        android:src="@drawable/ic_arrow_back_white_24dp"
+        android:tint="?attr/actionMenuTextColor"
+        android:visibility="visible" />
 
     <org.thoughtcrime.securesms.components.AvatarImageView
-            android:id="@+id/contact_photo_image"
-            android:foreground="@drawable/contact_photo_background"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_toEndOf="@id/up_button"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="10dp"
-            android:cropToPadding="true"
-            android:transitionName="contact_photo"
-            android:clickable="true"
-            app:inverted="true"
-            tools:src="@drawable/ic_contact_picture"
-            android:contentDescription="@string/conversation_list_item_view__contact_photo_image"/>
+        android:id="@+id/contact_photo_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:layout_toEndOf="@id/up_button"
+        android:clickable="true"
+        android:contentDescription="@string/conversation_list_item_view__contact_photo_image"
+        android:cropToPadding="true"
+        android:foreground="@drawable/contact_photo_background"
+        android:transitionName="contact_photo"
+        app:inverted="true"
+        tools:src="@drawable/ic_contact_picture" />
 
     <LinearLayout
         android:id="@+id/content"
@@ -45,17 +47,19 @@
 
         <org.thoughtcrime.securesms.components.emoji.EmojiTextView
             android:id="@+id/title"
+            style="@style/TextSecure.TitleTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:maxLines="1"
+            android:layout_gravity="center_vertical"
+            android:drawablePadding="5dp"
             android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:textColor="?attr/actionMenuTextColor"
             android:textSize="18dp"
             android:transitionName="recipient_name"
-            android:drawablePadding="5dp"
-            android:gravity="center_vertical"
-            android:layout_gravity="center_vertical"
-            style="@style/TextSecure.TitleTextStyle"
-            tools:ignore="UnusedAttribute"/>
+            app:fontFamily="@font/manrope_medium"
+            tools:ignore="UnusedAttribute" />
 
         <LinearLayout
             android:id="@+id/subtitle_container"
@@ -65,26 +69,29 @@
 
             <ImageView
                 android:id="@+id/verified_indicator"
-                android:src="@drawable/ic_check_circle_white_18dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="3dp"
                 android:layout_gravity="bottom"
+                android:layout_marginEnd="3dp"
                 android:alpha="0.7"
-                android:visibility="gone"/>
+                android:src="@drawable/ic_check_circle_white_18dp"
+                android:tint="?attr/actionMenuTextColor"
+                android:visibility="gone" />
 
             <org.thoughtcrime.securesms.components.emoji.EmojiTextView
                 android:id="@+id/subtitle"
+                style="@style/TextSecure.SubtitleTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:ellipsize="end"
                 android:layout_gravity="center_vertical|start"
+                android:ellipsize="end"
                 android:gravity="center_vertical"
+                android:maxLines="1"
+                android:textColor="?attr/actionMenuTextColor"
                 android:textDirection="ltr"
                 android:textSize="13dp"
-                tools:text="(123) 123-1234"
-                style="@style/TextSecure.SubtitleTextStyle"/>
+                app:fontFamily="@font/manrope_medium"
+                tools:text="(123) 123-1234" />
 
         </LinearLayout>
 

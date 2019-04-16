@@ -16,11 +16,13 @@
                android:layout_gravity="center_vertical"
                android:src="@drawable/ic_face_white_24dp"/>
 
-    <TextView android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:textColor="@color/white"
-              android:textSize="18sp"
-              android:layout_margin="16dp"
-              android:text="@string/profile_group_share_view__make_your_profile_name_and_photo_visible_to_this_group"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/manrope_medium"
+        android:text="@string/profile_group_share_view__make_your_profile_name_and_photo_visible_to_this_group"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
 
 </LinearLayout>

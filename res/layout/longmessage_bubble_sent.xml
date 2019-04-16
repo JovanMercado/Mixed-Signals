@@ -12,18 +12,19 @@
 
     <org.thoughtcrime.securesms.components.emoji.EmojiTextView
         android:id="@+id/longmessage_text"
+        style="@style/Signal.Text.Body"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/message_bubble_top_padding"
         android:layout_marginStart="@dimen/message_bubble_horizontal_padding"
+        android:layout_marginTop="@dimen/message_bubble_top_padding"
         android:layout_marginEnd="@dimen/message_bubble_horizontal_padding"
         android:layout_marginBottom="@dimen/message_bubble_collapsed_footer_padding"
-        style="@style/Signal.Text.Body"
         android:textColor="?conversation_item_sent_text_primary_color"
         android:textColorLink="?conversation_item_sent_text_primary_color"
         android:textIsSelectable="true"
+        app:fontFamily="sans-serif"
         app:scaleEmojis="true"
-        tools:text="With great power comes great responsibility."/>
+        tools:text="With great power comes great responsibility." />
 
     <org.thoughtcrime.securesms.components.ConversationItemFooter
         android:id="@+id/longmessage_footer"

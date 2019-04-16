@@ -66,6 +66,7 @@
             android:id="@+id/register_button"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/manrope_medium"
             android:padding="20dp"
             android:text="@string/conversation_activity__enable_signal_messages"
             android:visibility="gone" />
@@ -74,6 +75,7 @@
             android:id="@+id/unblock_button"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/manrope_medium"
             android:padding="20dp"
             android:text="@string/ConversationActivity_unblock"
             android:visibility="gone" />
@@ -82,6 +84,7 @@
             android:id="@+id/make_default_sms_button"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/manrope_medium"
             android:padding="20dp"
             android:text="@string/conversation_activity__enable_signal_for_sms"
             android:visibility="gone" />
@@ -91,6 +94,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="?android:windowBackground"
+            android:fontFamily="@font/manrope_medium"
             android:paddingStart="5dip"
             android:text="160/160 (1)"
             android:visibility="gone" />

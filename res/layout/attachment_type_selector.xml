@@ -44,11 +44,13 @@
                         android:contentDescription="@string/attachment_type_selector__gallery_description"
                         app:circleColor="@color/purple_400"/>
 
-                <TextView android:layout_marginTop="10dp"
-                          style="@style/AttachmentTypeLabel"
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:text="@string/attachment_type_selector__gallery"/>
+                <TextView
+                    style="@style/AttachmentTypeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/manrope_medium"
+                    android:text="@string/attachment_type_selector__gallery" />
 
             </LinearLayout>
 
@@ -67,11 +69,13 @@
                         android:contentDescription="@string/attachment_type_selector__audio_description"
                         app:circleColor="@color/orange_400"/>
 
-                <TextView android:layout_marginTop="10dp"
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          style="@style/AttachmentTypeLabel"
-                          android:text="@string/attachment_type_selector__audio"/>
+                <TextView
+                    style="@style/AttachmentTypeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/manrope_medium"
+                    android:text="@string/attachment_type_selector__audio" />
 
             </LinearLayout>
 
@@ -90,11 +94,13 @@
                         android:contentDescription="@string/attachment_type_selector__file_description"
                         app:circleColor="@color/red_400"/>
 
-                <TextView android:layout_marginTop="10dp"
-                          style="@style/AttachmentTypeLabel"
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:text="@string/attachment_type_selector__file"/>
+                <TextView
+                    style="@style/AttachmentTypeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/manrope_medium"
+                    android:text="@string/attachment_type_selector__file" />
 
             </LinearLayout>
 
@@ -113,11 +119,13 @@
                         android:contentDescription="@string/attachment_type_selector__contact_description"
                         app:circleColor="@color/blue_400"/>
 
-                <TextView android:layout_marginTop="10dp"
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          style="@style/AttachmentTypeLabel"
-                          android:text="@string/attachment_type_selector__contact"/>
+                <TextView
+                    style="@style/AttachmentTypeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/manrope_medium"
+                    android:text="@string/attachment_type_selector__contact" />
 
             </LinearLayout>
 
@@ -147,12 +155,14 @@
                         android:contentDescription="@string/attachment_type_selector__camera_description"
                         app:circleColor="@color/green_400"/>
 
-                <TextView android:layout_marginTop="10dp"
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:gravity="center"
-                          style="@style/AttachmentTypeLabel"
-                          android:text="@string/attachment_type_selector__camera"/>
+                <TextView
+                    style="@style/AttachmentTypeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/manrope_medium"
+                    android:gravity="center"
+                    android:text="@string/attachment_type_selector__camera" />
 
             </LinearLayout>
 
@@ -172,11 +182,13 @@
                         android:contentDescription="@string/attachment_type_selector__location_description"
                         app:circleColor="@color/blue_grey_400"/>
 
-                <TextView android:layout_marginTop="10dp"
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          style="@style/AttachmentTypeLabel"
-                          android:text="@string/attachment_type_selector__location"/>
+                <TextView
+                    style="@style/AttachmentTypeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/manrope_medium"
+                    android:text="@string/attachment_type_selector__location" />
 
             </LinearLayout>
 
@@ -196,11 +208,13 @@
                         android:contentDescription="@string/attachment_type_selector__gif_description"
                         app:circleColor="@color/cyan_400"/>
 
-                <TextView android:layout_marginTop="10dp"
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          style="@style/AttachmentTypeLabel"
-                          android:text="@string/attachment_type_selector__gif"/>
+                <TextView
+                    style="@style/AttachmentTypeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/manrope_medium"
+                    android:text="@string/attachment_type_selector__gif" />
 
             </LinearLayout>
 
@@ -219,11 +233,13 @@
                         android:contentDescription="@string/attachment_type_selector__drawer_description"
                         app:circleColor="@color/gray50"/>
 
-                <TextView android:layout_marginTop="10dp"
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          style="@style/AttachmentTypeLabel"
-                          android:text=" "/>
+                <TextView
+                    style="@style/AttachmentTypeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/manrope_medium"
+                    android:text=" " />
 
             </LinearLayout>
 

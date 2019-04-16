@@ -25,18 +25,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
+            android:fontFamily="@font/manrope_medium"
             android:textColor="@color/white"
-            android:textSize="18sp"
-            tools:text="Invite to Signal"/>
+            android:textSize="16sp"
+            tools:text="Invite to Signal" />
 
         <TextView
             android:id="@+id/reminder_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-light"
+            android:fontFamily="@font/manrope_medium"
             android:textColor="@color/white"
-            android:textSize="16sp"
-            tools:text="Take your conversation with Jules Bonnot to the next level."/>
+            android:textSize="12sp"
+            tools:text="Take your conversation with Jules Bonnot to the next level." />
 
     </LinearLayout>
 

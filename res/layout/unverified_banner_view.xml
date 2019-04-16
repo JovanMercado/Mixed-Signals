@@ -17,14 +17,16 @@
                android:layout_gravity="center_vertical"
                android:src="@drawable/ic_alert"/>
 
-    <TextView android:id="@+id/unverified_text"
-              android:layout_width="0dp"
-              android:layout_height="wrap_content"
-              android:textColor="@color/white"
-              android:textSize="16sp"
-              android:layout_weight="1"
-              android:layout_margin="16dp"
-              tools:text="Your safety number with Jules Bonnot has changed and is no longer verified"/>
+    <TextView
+        android:id="@+id/unverified_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/manrope_medium"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        tools:text="Your safety number with Jules Bonnot has changed and is no longer verified" />
 
     <ImageButton
             android:id="@+id/cancel"

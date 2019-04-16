@@ -67,30 +67,30 @@
 
                 <TextView
                     android:id="@+id/group_message_sender"
+                    style="@style/Signal.Text.Preview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="4sp"
-                    style="@style/Signal.Text.Preview"
-                    android:fontFamily="sans-serif-medium"
-                    android:textColor="?conversation_item_received_text_primary_color"
-                    android:maxLines="1"
                     android:ellipsize="end"
-                    tools:visibility="visible"
-                    tools:text="+14152222222"/>
+                    android:fontFamily="@font/manrope_medium"
+                    android:maxLines="1"
+                    android:textColor="?conversation_item_received_text_primary_color"
+                    tools:text="+14152222222"
+                    tools:visibility="visible" />
 
                 <TextView
                     android:id="@+id/group_message_sender_profile"
+                    style="@style/Signal.Text.Preview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/manrope_medium"
+                    android:maxLines="1"
                     android:paddingStart="4sp"
                     android:paddingEnd="4sp"
-                    style="@style/Signal.Text.Preview"
-                    android:fontFamily="sans-serif-regular"
                     android:textColor="?conversation_item_received_text_primary_color"
                     android:textStyle="italic"
-                    android:maxLines="1"
-                    android:ellipsize="end"
-                    tools:text="~Clement Duval"/>
+                    tools:text="~Clement Duval" />
 
             </LinearLayout>
 
@@ -149,19 +149,23 @@
 
             <org.thoughtcrime.securesms.components.emoji.EmojiTextView
                 android:id="@+id/conversation_item_body"
+                style="@style/Signal.Text.Body"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/message_bubble_top_padding"
-                android:layout_marginBottom="@dimen/message_bubble_collapsed_footer_padding"
                 android:layout_marginStart="@dimen/message_bubble_horizontal_padding"
+                android:layout_marginTop="@dimen/message_bubble_top_padding"
                 android:layout_marginEnd="@dimen/message_bubble_horizontal_padding"
-                style="@style/Signal.Text.Body"
+                android:layout_marginBottom="@dimen/message_bubble_collapsed_footer_padding"
+                android:ellipsize="end"
+                android:lineSpacingMultiplier=".75"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
                 android:textColor="?conversation_item_received_text_primary_color"
                 android:textColorLink="?conversation_item_received_text_primary_color"
-                android:ellipsize="end"
-                app:scaleEmojis="true"
                 app:emoji_maxLength="1000"
-                tools:text="Mango pickle lorem ipsum"/>
+                app:fontFamily="@font/manrope_medium"
+                app:scaleEmojis="true"
+                tools:text="Mango pickle lorem ipsum" />
 
             <org.thoughtcrime.securesms.components.ConversationItemFooter
                 android:id="@+id/conversation_item_footer"

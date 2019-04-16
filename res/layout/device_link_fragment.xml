@@ -26,30 +26,33 @@
                       android:background="?device_link_item_card_background">
 
             <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:textStyle="bold"
-                    android:text="@string/DeviceProvisioningActivity_link_this_device"
-                    android:textSize="16sp"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/manrope_bold"
+                android:padding="10dp"
+                android:text="@string/DeviceProvisioningActivity_link_this_device"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <View android:layout_width="match_parent"
                   android:layout_height="0.5dp"
                   android:background="#1E000000"/>
 
             <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="@string/DeviceProvisioningActivity_content_intro"
-                    android:textSize="14sp"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/manrope_medium"
+                android:padding="10dp"
+                android:text="@string/DeviceProvisioningActivity_content_intro"
+                android:textSize="14sp" />
 
             <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="@string/DeviceProvisioningActivity_content_bullets"
-                    android:textSize="14sp"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/manrope_medium"
+                android:padding="10dp"
+                android:text="@string/DeviceProvisioningActivity_content_bullets"
+                android:textSize="14sp" />
 
             <View android:layout_width="match_parent"
                   android:layout_height="0.5dp"
@@ -71,12 +74,13 @@
                            android:clickable="false"/>
 
                 <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="14sp"
-                        android:textColor="@color/blue_400"
-                        android:text="@string/device_link_fragment__link_device"
-                        android:clickable="false"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:fontFamily="@font/manrope_medium"
+                    android:text="@string/device_link_fragment__link_device"
+                    android:textColor="@color/blue_400"
+                    android:textSize="14sp" />
 
             </LinearLayout>
 

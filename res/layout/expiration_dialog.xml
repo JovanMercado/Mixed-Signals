@@ -22,13 +22,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-    <TextView android:id="@+id/expiration_details"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:layout_below="@id/expiration_number_picker"
-              android:minLines="3"
-              android:padding="20dp"
-              tools:text="Your messages will not expire."/>
+    <TextView
+        android:id="@+id/expiration_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/expiration_number_picker"
+        android:fontFamily="@font/manrope_medium"
+        android:minLines="3"
+        android:padding="20dp"
+        tools:text="Your messages will not expire." />
 
 
 </RelativeLayout>

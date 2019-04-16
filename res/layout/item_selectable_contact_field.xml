@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_width="match_parent"
@@ -34,17 +35,19 @@
             android:id="@+id/contact_field_value"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLines="1"
             android:ellipsize="end"
+            android:maxLines="1"
+            app:fontFamily="@font/manrope_medium"
             tools:text="(610) 867-5309" />
 
         <TextView
             android:id="@+id/contact_field_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLines="1"
             android:ellipsize="end"
-            tools:text="Mobile"/>
+            android:fontFamily="@font/manrope_medium"
+            android:maxLines="1"
+            tools:text="Mobile" />
 
     </LinearLayout>
 

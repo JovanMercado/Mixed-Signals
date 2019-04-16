@@ -10,19 +10,20 @@
                       android:layout_height="match_parent"
                       android:orientation="horizontal">
 
-            <EditText android:id="@+id/search_view"
-                      android:layout_height="wrap_content"
-                      android:layout_width="0px"
-                      android:layout_weight="1"
-                      android:hint="@string/contact_selection_activity__enter_name_or_number"
-                      android:inputType="textPersonName"
-                      style="@style/TextSecure.TitleTextStyle"
-                      android:background="@android:color/transparent"
-                      android:layout_gravity="center_vertical"
-                      android:gravity="center_vertical"
-                      android:textCursorDrawable="@null"
-                      android:textSize="18sp"
-                      android:fontFamily="sans-serif"/>
+            <EditText
+                android:id="@+id/search_view"
+                style="@style/TextSecure.TitleTextStyle"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/manrope_medium"
+                android:gravity="center_vertical"
+                android:hint="@string/contact_selection_activity__enter_name_or_number"
+                android:inputType="textPersonName"
+                android:textCursorDrawable="@null"
+                android:textSize="18sp" />
 
             <org.thoughtcrime.securesms.components.AnimatingToggle
                 android:id="@+id/button_toggle"

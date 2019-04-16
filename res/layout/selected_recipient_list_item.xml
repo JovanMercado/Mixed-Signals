@@ -11,16 +11,17 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:fontFamily="@font/manrope_medium"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
         android:id="@+id/phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_below="@id/name"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:fontFamily="sans-serif-light" />
+        android:layout_alignParentStart="true"
+        android:fontFamily="@font/manrope_medium"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <ImageButton
         android:id="@+id/delete"

@@ -14,10 +14,12 @@
                  android:layout_height="wrap_content"
                  android:indeterminate="true"/>
 
-    <TextView android:id="@+id/progress_text"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:gravity="center"
-              tools:text="1345 messages so far"/>
+    <TextView
+        android:id="@+id/progress_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/manrope_medium"
+        android:gravity="center"
+        tools:text="1345 messages so far" />
 
 </LinearLayout>

@@ -15,9 +15,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:fontFamily="@font/manrope_medium"
         android:gravity="center"
-        android:textColor="?conversation_item_sent_text_primary_color"
-        android:text="@string/load_more_header__see_full_conversation" />
+        android:text="@string/load_more_header__see_full_conversation"
+        android:textColor="?conversation_item_sent_text_primary_color" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -26,13 +27,14 @@
         android:layout_gravity="center">
 
         <TextView
-            style="@style/Base.TextAppearance.AppCompat.Button"
             android:id="@+id/load_more_title"
+            style="@style/Base.TextAppearance.AppCompat.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:textColor="?conversation_item_sent_text_primary_color"
-            android:text="@string/load_more_header__loading" />
+            android:fontFamily="@font/manrope_medium"
+            android:text="@string/load_more_header__loading"
+            android:textColor="?conversation_item_sent_text_primary_color" />
 
         <com.pnikosis.materialishprogress.ProgressWheel
             android:id="@+id/load_more_progress"

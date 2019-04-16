@@ -9,7 +9,9 @@
     <color name="textsecure_primary_dark">@color/signal_primary_dark</color>
     <color name="textsecure_primary_alpha33">@color/signal_primary_alpha33</color>
 
-    <color name="white">#ffffffff</color>
+    <color name="colorInverted">@color/black</color>
+
+    <color name="white">#FFFFFF</color>
     <color name="black">#ff000000</color>
     <color name="gray5">#ffeeeeee</color>
     <color name="gray10">#ffdddddd</color>
@@ -66,5 +68,6 @@
     <color name="logsubmit_confirmation_background">#44ff2d00</color>
 
     <color name="avatar_background">@color/transparent_black_90</color>
+    <color name="colorTextPrimary">@color/black</color>
 
 </resources>

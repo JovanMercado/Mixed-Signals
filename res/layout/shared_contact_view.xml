@@ -31,25 +31,27 @@
 
                 <org.thoughtcrime.securesms.components.emoji.EmojiTextView
                     android:id="@+id/contact_name"
+                    style="@style/Signal.Text.Body"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="4dp"
-                    style="@style/Signal.Text.Body"
-                    android:maxLines="1"
                     android:ellipsize="end"
                     android:fontFamily="sans-serif-medium"
+                    android:maxLines="1"
                     android:textSize="16sp"
-                    tools:text="Peter Parker"/>
+                    app:fontFamily="@font/manrope_medium"
+                    tools:text="Peter Parker" />
 
                 <TextView
                     android:id="@+id/contact_number"
+                    style="@style/Signal.Text.Caption"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/Signal.Text.Caption"
-                    android:maxLines="1"
                     android:ellipsize="end"
+                    android:fontFamily="@font/manrope_medium"
+                    android:maxLines="1"
                     android:textColor="@color/grey_600"
-                    tools:text="(610) 555-5555"/>
+                    tools:text="(610) 555-5555" />
 
             </LinearLayout>
 
@@ -67,19 +69,19 @@
 
         <TextView
             android:id="@+id/contact_action_button"
+            style="@style/Signal.Text.Preview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/message_bubble_bottom_padding"
-            android:gravity="center"
-            android:padding="10dp"
-            style="@style/Signal.Text.Preview"
-            android:maxLines="1"
-            android:ellipsize="end"
-            android:fontFamily="sans-serif-medium"
-            android:textColor="@color/core_blue"
             android:background="?attr/shared_contact_item_button_color"
+            android:ellipsize="end"
+            android:fontFamily="@font/manrope_medium"
             android:foreground="?attr/selectableItemBackground"
-            tools:text="Add to Contacts"/>
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:textColor="@color/core_blue"
+            tools:text="Add to Contacts" />
 
     </LinearLayout>
 

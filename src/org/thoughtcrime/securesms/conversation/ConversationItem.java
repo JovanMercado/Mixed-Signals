@@ -509,7 +509,7 @@ public class ConversationItem extends LinearLayout
       linkPreviewStub.get().setOnLongClickListener(passthroughClickListener);
 
 
-      footer.setVisibility(VISIBLE);
+      footer.setVisibility(GONE);
     } else if (hasAudio(messageRecord)) {
       audioViewStub.get().setVisibility(View.VISIBLE);
       if (mediaThumbnailStub.resolved()) mediaThumbnailStub.get().setVisibility(View.GONE);
@@ -524,7 +524,7 @@ public class ConversationItem extends LinearLayout
 
       ViewUtil.updateLayoutParams(bodyText, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
       ViewUtil.updateLayoutParams(groupSenderHolder, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-      footer.setVisibility(VISIBLE);
+      footer.setVisibility(GONE);
     } else if (hasDocument(messageRecord)) {
       documentViewStub.get().setVisibility(View.VISIBLE);
       if (mediaThumbnailStub.resolved()) mediaThumbnailStub.get().setVisibility(View.GONE);
@@ -540,7 +540,7 @@ public class ConversationItem extends LinearLayout
 
       ViewUtil.updateLayoutParams(bodyText, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
       ViewUtil.updateLayoutParams(groupSenderHolder, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-      footer.setVisibility(VISIBLE);
+      footer.setVisibility(GONE);
     } else if (hasThumbnail(messageRecord)) {
       mediaThumbnailStub.get().setVisibility(View.VISIBLE);
       if (audioViewStub.resolved())     audioViewStub.get().setVisibility(View.GONE);
@@ -566,7 +566,7 @@ public class ConversationItem extends LinearLayout
 
       ViewUtil.updateLayoutParams(bodyText, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
       ViewUtil.updateLayoutParams(groupSenderHolder, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-      footer.setVisibility(VISIBLE);
+      footer.setVisibility(GONE);
     } else {
       if (mediaThumbnailStub.resolved()) mediaThumbnailStub.get().setVisibility(View.GONE);
       if (audioViewStub.resolved())      audioViewStub.get().setVisibility(View.GONE);
@@ -576,7 +576,7 @@ public class ConversationItem extends LinearLayout
 
       ViewUtil.updateLayoutParams(bodyText, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
       ViewUtil.updateLayoutParams(groupSenderHolder, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-      footer.setVisibility(VISIBLE);
+      footer.setVisibility(GONE);
     }
   }
 
@@ -779,7 +779,7 @@ public class ConversationItem extends LinearLayout
         current.isFailed() || differentTimestamps || isEndOfMessageCluster(current, next, isGroupThread))
     {
       ConversationItemFooter activeFooter = getActiveFooter(current);
-      activeFooter.setVisibility(VISIBLE);
+      activeFooter.setVisibility(GONE);
       activeFooter.setMessageRecord(current, locale);
     }
   }

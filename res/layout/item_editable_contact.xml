@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout 
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" 
     android:layout_width="match_parent"
@@ -18,10 +19,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_weight="1"
-            android:textSize="20sp"
-            android:maxLines="2"
             android:ellipsize="end"
-            tools:text="Peter Parker"/>
+            android:maxLines="2"
+            android:textSize="20sp"
+            app:fontFamily="@font/manrope_medium"
+            tools:text="Peter Parker" />
 
         <ImageButton
             android:id="@+id/editable_contact_name_edit_button"

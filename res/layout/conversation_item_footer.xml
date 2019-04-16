@@ -18,14 +18,15 @@
 
         <TextView
             android:id="@+id/footer_date"
-            android:autoLink="none"
+            style="@style/Signal.Text.Caption.MessageSent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:autoLink="none"
+            android:fontFamily="@font/manrope_medium"
             android:linksClickable="false"
-            style="@style/Signal.Text.Caption.MessageSent"
-            android:textColor="?conversation_item_sent_text_secondary_color"
             android:textAllCaps="true"
-            tools:text="30 mins"/>
+            android:textColor="?conversation_item_sent_text_secondary_color"
+            tools:text="30 mins" />
 
         <org.thoughtcrime.securesms.components.ExpirationTimerView
             android:id="@+id/footer_expiration_timer"
@@ -40,20 +41,20 @@
 
     <TextView
         android:id="@+id/footer_sim_info"
-        android:autoLink="none"
+        style="@style/Signal.Text.Caption.MessageSent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
         android:layout_marginEnd="4dp"
+        android:autoLink="none"
+        android:ellipsize="end"
+        android:fontFamily="@font/manrope_medium"
+        android:linksClickable="false"
         android:maxWidth="140dp"
         android:maxLines="1"
-        android:ellipsize="end"
-        android:linksClickable="false"
-        style="@style/Signal.Text.Caption.MessageSent"
-        android:layout_gravity="end|bottom"
-        android:fontFamily="sans-serif-light"
         android:visibility="gone"
-        tools:visibility="visible"
-        tools:text="to SIM1" />
+        tools:text="to SIM1"
+        tools:visibility="visible" />
 
     <ImageView
         android:id="@+id/footer_insecure_indicator"

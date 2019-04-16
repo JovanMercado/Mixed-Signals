@@ -33,19 +33,20 @@
 
             <org.thoughtcrime.securesms.components.emoji.EmojiEditText
                 android:id="@+id/mediasend_caption"
+                style="@style/Signal.Text.Body"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:paddingTop="6dp"
-                android:paddingBottom="6dp"
-                style="@style/Signal.Text.Body"
-                android:maxLines="3"
-                android:maxLength="240"
-                android:hint="@string/MediaSendActivity_add_a_caption"
                 android:autoText="true"
+                android:background="@null"
+                android:fontFamily="@font/manrope_medium"
+                android:hint="@string/MediaSendActivity_add_a_caption"
                 android:inputType="textAutoCorrect|textCapSentences|textMultiLine"
-                android:background="@null"/>
+                android:maxLength="240"
+                android:maxLines="3"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp" />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/mediasend_media_rail"
@@ -90,15 +91,17 @@
                         android:layout_height="@dimen/conversation_compose_height" />
 
                     <org.thoughtcrime.securesms.components.ComposeText
-                        style="@style/ComposeEditText"
                         android:id="@+id/mediasend_compose_text"
+                        style="@style/ComposeEditText"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
-                        android:nextFocusForward="@+id/send_button"
+                        android:fontFamily="@font/manrope_medium"
                         android:nextFocusRight="@+id/send_button"
-                        tools:hint="Send TextSecure message" >
+                        android:nextFocusForward="@+id/send_button"
+                        tools:hint="Send TextSecure message">
+
                         <requestFocus />
                     </org.thoughtcrime.securesms.components.ComposeText>
 
@@ -136,10 +139,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
+                android:fontFamily="@font/manrope_medium"
                 android:paddingBottom="12dp"
                 android:visibility="gone"
-                tools:visibility="visible"
-                tools:text="160/160 (1)" />
+                tools:text="160/160 (1)"
+                tools:visibility="visible" />
 
             <ViewStub
                 android:id="@+id/mediasend_emoji_drawer_stub"

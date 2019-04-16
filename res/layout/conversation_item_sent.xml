@@ -90,19 +90,23 @@
 
             <org.thoughtcrime.securesms.components.emoji.EmojiTextView
                 android:id="@+id/conversation_item_body"
+                style="@style/Signal.Text.Body"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/message_bubble_top_padding"
                 android:layout_marginStart="@dimen/message_bubble_horizontal_padding"
+                android:layout_marginTop="@dimen/message_bubble_top_padding"
                 android:layout_marginEnd="@dimen/message_bubble_horizontal_padding"
                 android:layout_marginBottom="@dimen/message_bubble_collapsed_footer_padding"
-                style="@style/Signal.Text.Body"
+                android:ellipsize="end"
+                android:lineSpacingMultiplier=".75"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
                 android:textColor="?conversation_item_sent_text_primary_color"
                 android:textColorLink="?conversation_item_sent_text_primary_color"
-                android:ellipsize="end"
-                app:scaleEmojis="true"
                 app:emoji_maxLength="1000"
-                tools:text="Mango pickle lorem ipsum"/>
+                app:fontFamily="@font/manrope_medium"
+                app:scaleEmojis="true"
+                tools:text="Mango pickle lorem ipsum" />
 
             <View
                 android:id="@+id/group_sender_holder"
@@ -114,12 +118,14 @@
                 android:id="@+id/group_message_sender"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
                 android:visibility="gone" />
 
             <TextView
                 android:id="@+id/group_message_sender_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
                 android:visibility="gone" />
 
             <org.thoughtcrime.securesms.components.ConversationItemFooter

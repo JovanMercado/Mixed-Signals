@@ -48,12 +48,13 @@
 
         <TextView
             android:id="@+id/album_cell_overflow_text"
-            android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:gravity="center"
-            android:textSize="28dp"
-            android:textColor="@color/core_white"
+            android:layout_height="match_parent"
             android:background="@color/transparent_black_40"
+            android:fontFamily="@font/manrope_medium"
+            android:gravity="center"
+            android:textColor="@color/core_white"
+            android:textSize="28dp"
             tools:text="+2" />
 
     </FrameLayout>

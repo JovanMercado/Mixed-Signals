@@ -40,35 +40,35 @@
 
     <!-- ActionBar styles -->
     <style name="TextSecure.DarkActionBar"
-           parent="@style/Widget.AppCompat.ActionBar">
-        <item name="background">@color/core_grey_90</item>
+        parent="@style/Widget.AppCompat.ActionBar">
+        <item name="background">@color/core_grey_95</item>
         <item name="android:popupTheme">@style/ThemeOverlay.AppCompat.Dark</item>
         <item name="elevation">4dp</item>
         <item name="popupTheme">@style/ThemeOverlay.AppCompat.Dark</item>
-        <item name="titleTextStyle">@style/TextSecure.TitleTextStyle</item>
+        <item name="titleTextStyle">@style/TextSecure.DarkTitleTextStyle</item>
         <item name="subtitleTextStyle">@style/TextSecure.SubtitleTextStyle</item>
         <item name="android:textColorSecondary">@color/white</item>
     </style>
 
     <style name="TextSecure.LightActionBar"
-           parent="@style/Widget.AppCompat.ActionBar">
-        <item name="background">@color/textsecure_primary</item>
+        parent="@style/Widget.AppCompat.ActionBar">
+        <item name="background">@color/white</item>
         <item name="elevation">4dp</item>
         <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
         <item name="titleTextStyle">@style/TextSecure.TitleTextStyle</item>
         <item name="subtitleTextStyle">@style/TextSecure.SubtitleTextStyle</item>
-        <item name="android:textColorPrimary">@color/white</item>
-        <item name="android:textColorSecondary">@color/white</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorSecondary">@color/black</item>
     </style>
 
     <style name="TextSecure.LightActionBar.DarkText"
-           parent="TextSecure.LightActionBar">
+        parent="TextSecure.LightActionBar">
         <item name="android:textColorPrimary">@color/black</item>
         <item name="android:textColorSecondary">@color/black</item>
     </style>
 
     <style name="TextSecure.FlatLightActionBar"
-           parent="@style/TextSecure.LightActionBar">
+        parent="@style/TextSecure.LightActionBar">
         <item name="elevation">0dp</item>
     </style>
 
@@ -89,21 +89,27 @@
     </style>
 
     <style name="TextSecure.TitleTextStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">#BFffffff</item>
+    </style>
+
+    <style name="TextSecure.DarkTitleTextStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
         <item name="android:textColor">@color/white</item>
         <item name="android:textColorHint">#BFffffff</item>
     </style>
+
 
     <style name="TextSecure.SubtitleTextStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Subtitle">
         <item name="android:textColor">#BFffffff</item>
     </style>
 
     <style name="NotificationText">
-      <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
     </style>
 
     <style name="NotificationTitle">
-      <item name="android:textColor">?android:attr/textColorPrimary</item>
-      <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="Registration.Description" parent="@android:style/TextAppearance">
@@ -118,7 +124,7 @@
         <item name="android:shadowRadius">0.0</item>
         <item name="android:lineSpacingMultiplier">1.25</item>
     </style>
-    
+
     <style name="Registration.Label" parent="@android:style/TextAppearance">
         <item name="android:textSize">12.0sp</item>
         <item name="android:typeface">sans</item>
@@ -133,11 +139,11 @@
         <item name="android:shadowRadius">0.0</item>
         <item name="android:lineSpacingMultiplier">1.25</item>
     </style>
-    
+
     <style name="Registration.BigLabel" parent="@style/Registration.Label">
         <item name="android:textSize">20sp</item>
     </style>
-    
+
     <style name="Registration.Constant" parent="@android:style/TextAppearance">
         <item name="android:typeface">sans</item>
         <item name="android:textStyle">normal</item>
@@ -146,7 +152,7 @@
         <item name="android:shadowDx">1.0</item>
         <item name="android:shadowDy">1.0</item>
         <item name="android:shadowRadius">0.0</item>
-        <item name="android:lineSpacingMultiplier">1.25</item>        
+        <item name="android:lineSpacingMultiplier">1.25</item>
     </style>
 
     <!-- For Holo Light Dialog Activity Styling Emulation -->

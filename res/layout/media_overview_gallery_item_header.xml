@@ -6,13 +6,15 @@
              android:background="?attr/media_overview_toolbar_background"
              android:padding="16dp">
 
-    <TextView android:id="@+id/text"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_gravity="start|center_vertical"
-              android:textColor="?attr/media_overview_header_foreground"
-              android:textSize="14sp"
-              android:textStyle="bold"
-              android:textAllCaps="true"
-              tools:text="March 1, 2015" />
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center_vertical"
+        android:fontFamily="@font/manrope_medium"
+        android:textAllCaps="true"
+        android:textColor="?attr/media_overview_header_foreground"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:text="March 1, 2015" />
 </FrameLayout>

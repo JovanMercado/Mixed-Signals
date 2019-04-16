@@ -36,27 +36,30 @@
                     android:id="@+id/contact_details_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:transitionName="name"
                     android:gravity="center"
                     android:textSize="20sp"
-                    tools:text="Peter Parker"/>
+                    android:transitionName="name"
+                    app:fontFamily="@font/manrope_medium"
+                    tools:text="Peter Parker" />
 
                 <TextView
                     android:id="@+id/contact_details_number"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:transitionName="number"
                     android:layout_marginBottom="14dp"
+                    android:fontFamily="@font/manrope_medium"
                     android:gravity="center"
-                    tools:text="(610) 555-5555"/>
+                    android:transitionName="number"
+                    tools:text="(610) 555-5555" />
 
                 <Button
                     android:id="@+id/contact_details_add_button"
+                    style="@style/Button.Primary"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
                     android:layout_gravity="center"
-                    style="@style/Button.Primary"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/manrope_medium"
                     android:text="@string/SharedContactDetailsActivity_add_to_contacts" />
 
                 <FrameLayout
@@ -65,14 +68,15 @@
 
                     <Button
                         android:id="@+id/contact_details_invite_button"
+                        style="@style/Button.Borderless"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
                         android:layout_gravity="center"
-                        style="@style/Button.Borderless"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/manrope_medium"
                         android:text="@string/SharedContactDetailsActivity_invite_to_signal"
                         android:visibility="gone"
-                        tools:visibility="gone"/>
+                        tools:visibility="gone" />
 
                     <LinearLayout
                         android:id="@+id/contact_details_engage_container"
@@ -103,8 +107,9 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="@font/manrope_medium"
                                 android:text="@string/SharedContactDetailsActivity_signal_message"
-                                android:textColor="@color/signal_primary"/>
+                                android:textColor="@color/signal_primary" />
 
                         </LinearLayout>
 
@@ -127,8 +132,9 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="@font/manrope_medium"
                                 android:text="@string/SharedContactDetailsActivity_signal_call"
-                                android:textColor="@color/signal_primary"/>
+                                android:textColor="@color/signal_primary" />
 
                         </LinearLayout>
 

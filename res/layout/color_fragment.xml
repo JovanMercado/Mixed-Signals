@@ -6,20 +6,21 @@
               android:orientation="vertical"
               tools:background="#FF2090ea">
 
-    <TextView android:layout_width="match_parent"
-              android:layout_height="0dp"
-              android:layout_weight="1"
-              android:textAppearance="?android:attr/textAppearanceMedium"
-              android:id="@+id/blurb"
-              android:textSize="@dimen/onboarding_title_size"
-              android:textIsSelectable="false"
-              android:gravity="center_horizontal|bottom"
-              android:paddingStart="20dp"
-              android:paddingEnd="20dp"
-              android:layout_marginTop="30dp"
-              android:fontFamily="sans-serif-light"
-              tools:text="@string/ExperienceUpgradeActivity_ready_for_your_closeup"
-              android:textColor="@android:color/white" />
+    <TextView
+        android:id="@+id/blurb"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/manrope_medium"
+        android:gravity="center_horizontal|bottom"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white"
+        android:textIsSelectable="false"
+        android:textSize="@dimen/onboarding_title_size"
+        tools:text="@string/ExperienceUpgradeActivity_ready_for_your_closeup" />
 
     <ImageView android:id="@+id/watermark"
                android:layout_width="wrap_content"
@@ -29,17 +30,18 @@
                tools:src="@drawable/profile_splash"
                android:layout_gravity="center_horizontal"/>
 
-    <TextView android:layout_width="match_parent"
-              android:layout_height="0dp"
-              android:layout_weight="2"
-              android:id="@+id/subblurb"
-              android:textSize="@dimen/onboarding_subtitle_size"
-              android:textIsSelectable="false"
-              android:gravity="center_horizontal"
-              android:paddingStart="20dp"
-              android:paddingEnd="20dp"
-              android:fontFamily="sans-serif-light"
-              tools:text="@string/ExperienceUpgradeActivity_now_you_can_share_a_profile_photo_and_name_with_friends_on_signal"
-              android:textColor="@android:color/white" />
+    <TextView
+        android:id="@+id/subblurb"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:fontFamily="@font/manrope_medium"
+        android:gravity="center_horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textColor="@android:color/white"
+        android:textIsSelectable="false"
+        android:textSize="@dimen/onboarding_subtitle_size"
+        tools:text="@string/ExperienceUpgradeActivity_now_you_can_share_a_profile_photo_and_name_with_friends_on_signal" />
 
 </LinearLayout>

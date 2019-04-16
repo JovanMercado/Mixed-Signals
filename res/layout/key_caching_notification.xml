@@ -9,27 +9,30 @@
                   android:layout_centerVertical="true"
                   android:orientation="vertical"
                   android:layout_marginStart="10dip">
-	<TextView android:id="@+id/title"
-        android:textAppearance="@style/NotificationTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:singleLine="true"
-        android:ellipsize="marquee"
-        android:fadingEdge="horizontal"
-        android:text="@string/KeyCachingService_passphrase_cached"
-        />
 
-   <TextView android:id="@+id/text2"
-        android:textAppearance="@style/NotificationText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-2dp"
-        android:layout_marginBottom="-2dp"
-        android:singleLine="true"
-        android:fadingEdge="horizontal"
-        android:ellipsize="marquee"
-        android:text="@string/KeyCachingService_signal_passphrase_cached_with_lock"
-        />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:fontFamily="@font/manrope_medium"
+            android:singleLine="true"
+            android:text="@string/KeyCachingService_passphrase_cached"
+            android:textAppearance="@style/NotificationTitle" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-2dp"
+            android:layout_marginBottom="-2dp"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:fontFamily="@font/manrope_medium"
+            android:singleLine="true"
+            android:text="@string/KeyCachingService_signal_passphrase_cached_with_lock"
+            android:textAppearance="@style/NotificationText" />
     </LinearLayout>
     
 	<ImageView android:id="@+id/lock_cache_icon"

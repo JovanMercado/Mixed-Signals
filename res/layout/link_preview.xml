@@ -35,6 +35,7 @@
             android:fontFamily="sans-serif-medium"
             android:maxLines="2"
             android:textColor="?linkpreview_primary_text_color"
+            app:fontFamily="@font/manrope_medium"
             app:layout_constraintEnd_toStartOf="@+id/linkpreview_close"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/linkpreview_thumbnail"
@@ -50,6 +51,7 @@
             android:layout_marginTop="2dp"
             android:textAllCaps="true"
             android:textColor="?linkpreview_secondary_text_color"
+            app:fontFamily="@font/manrope_medium"
             app:layout_constraintStart_toEndOf="@+id/linkpreview_thumbnail"
             app:layout_constraintTop_toBottomOf="@+id/linkpreview_title"
             tools:text="dailybugle.com" />

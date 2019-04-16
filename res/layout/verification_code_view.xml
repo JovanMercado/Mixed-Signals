@@ -17,7 +17,8 @@
             android:id="@+id/code_zero"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="28dp"
+            android:fontFamily="@font/manrope_medium"
+            android:textSize="36sp"
             tools:text="1" />
 
     </LinearLayout>
@@ -35,7 +36,8 @@
             android:id="@+id/code_one"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="28dp"
+            android:fontFamily="@font/manrope_medium"
+            android:textSize="36sp"
             tools:text="2" />
 
     </LinearLayout>
@@ -53,7 +55,8 @@
             android:id="@+id/code_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="28dp"
+            android:fontFamily="@font/manrope_medium"
+            android:textSize="36sp"
             tools:text="2" />
 
     </LinearLayout>
@@ -71,8 +74,9 @@
             android:id="@+id/separator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/manrope_medium"
             android:text="-"
-            android:textSize="28dp" />
+            android:textSize="36sp" />
 
     </LinearLayout>
 
@@ -89,7 +93,8 @@
             android:id="@+id/code_three"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="28dp"
+            android:fontFamily="@font/manrope_medium"
+            android:textSize="36sp"
             tools:text="2" />
 
     </LinearLayout>
@@ -108,7 +113,8 @@
             android:id="@+id/code_four"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="28dp"
+            android:fontFamily="@font/manrope_medium"
+            android:textSize="36sp"
             tools:text="2" />
 
     </LinearLayout>
@@ -126,8 +132,9 @@
             android:id="@+id/code_five"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="28dp"
+            android:fontFamily="@font/manrope_medium"
             android:gravity="center"
+            android:textSize="36sp"
             tools:text="2" />
 
     </LinearLayout>

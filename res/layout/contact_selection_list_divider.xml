@@ -6,14 +6,16 @@
               android:layout_height="wrap_content"
               android:background="?attr/contact_list_divider">
 
-    <TextView android:id="@+id/label"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:paddingStart="16dp"
-              android:paddingTop="10dp"
-              android:paddingBottom="10dp"
-              android:textSize="14sp"
-              android:textColor="@color/signal_primary_dark"
-              tools:text="Recent chats"/>
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/manrope_medium"
+        android:paddingStart="16dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/signal_primary_dark"
+        android:textSize="14sp"
+        tools:text="Recent chats" />
 
 </LinearLayout>

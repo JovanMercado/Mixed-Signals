@@ -8,8 +8,9 @@
         android:id="@+id/search_no_results"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
         android:background="?attr/search_background"
+        android:fontFamily="@font/manrope_medium"
+        android:gravity="center"
         android:visibility="gone" />
 
     <android.support.v7.widget.RecyclerView

@@ -83,16 +83,18 @@
                         android:layout_height="@dimen/conversation_compose_height" />
 
                     <org.thoughtcrime.securesms.components.ComposeText
-                        style="@style/ComposeEditText"
                         android:id="@+id/embedded_text_editor"
+                        style="@style/ComposeEditText"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
-                        android:nextFocusForward="@+id/send_button"
+                        android:fontFamily="@font/manrope_medium"
                         android:nextFocusRight="@+id/send_button"
-                        tools:visibility="invisible"
-                        tools:hint="Send TextSecure message" >
+                        android:nextFocusForward="@+id/send_button"
+                        tools:hint="Send TextSecure message"
+                        tools:visibility="invisible">
+
                         <requestFocus />
                     </org.thoughtcrime.securesms.components.ComposeText>
 

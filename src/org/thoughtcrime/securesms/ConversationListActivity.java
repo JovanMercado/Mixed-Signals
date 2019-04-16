@@ -26,6 +26,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.Toolbar;
 import android.support.v7.widget.TooltipCompat;
 import android.text.TextUtils;
@@ -33,6 +34,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -104,6 +107,7 @@ public class ConversationListActivity extends PassphraseRequiredActionBarActivit
     RegistrationLockDialog.showReminderIfNecessary(this);
 
     TooltipCompat.setTooltipText(searchAction, getText(R.string.SearchToolbar_search_for_conversations_contacts_and_messages));
+
   }
 
   @Override
@@ -134,6 +138,10 @@ public class ConversationListActivity extends PassphraseRequiredActionBarActivit
     super.onPrepareOptionsMenu(menu);
     return true;
   }
+
+
+
+
 
   private void initializeSearchListener() {
     searchAction.setOnClickListener(v -> {

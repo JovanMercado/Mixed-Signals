@@ -15,8 +15,9 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
-        android:text="@string/RegistrationActivity_we_need_to_verify_that_youre_human"
+        android:fontFamily="@font/manrope_medium"
         android:gravity="center"
+        android:text="@string/RegistrationActivity_we_need_to_verify_that_youre_human"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

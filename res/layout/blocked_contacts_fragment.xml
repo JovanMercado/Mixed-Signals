@@ -12,12 +12,14 @@
               android:layout_weight="1"
               android:drawSelectorOnTop="false"/>
 
-    <TextView android:id="@id/android:empty"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:layout_gravity="center|center_vertical"
-              android:gravity="center|center_vertical"
-              android:textSize="20sp"
-              android:text="@string/blocked_contacts_fragment__no_blocked_contacts"/>
+    <TextView
+        android:id="@id/android:empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center|center_vertical"
+        android:fontFamily="@font/manrope_medium"
+        android:gravity="center|center_vertical"
+        android:text="@string/blocked_contacts_fragment__no_blocked_contacts"
+        android:textSize="20sp" />
 
 </LinearLayout>

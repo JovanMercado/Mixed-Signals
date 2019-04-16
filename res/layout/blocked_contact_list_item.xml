@@ -17,16 +17,18 @@
             android:scaleType="centerCrop"
             android:contentDescription="@string/SingleContactSelectionActivity_contact_photo" />
 
-    <TextView android:id="@+id/name"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:layout_alignParentTop="true"
-              android:layout_marginStart="14dip"
-              android:checkMark="?android:attr/listChoiceIndicatorMultiple"
-              android:singleLine="true"
-              android:ellipsize="marquee"
-              android:layout_toEndOf="@id/contact_photo_image"
-              android:gravity="center_vertical|start"
-              android:textAppearance="?android:attr/textAppearanceMedium" />
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="14dip"
+        android:layout_toEndOf="@id/contact_photo_image"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:ellipsize="marquee"
+        android:fontFamily="@font/manrope_medium"
+        android:gravity="center_vertical|start"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </org.thoughtcrime.securesms.preferences.BlockedContactListItem>

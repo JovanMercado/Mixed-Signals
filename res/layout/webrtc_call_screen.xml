@@ -58,14 +58,16 @@
                           android:gravity="center"
                           android:clickable="true">
 
-                <TextView android:id="@+id/untrusted_explanation"
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:layout_gravity="center"
-                          android:textSize="16sp"
-                          android:maxWidth="270dp"
-                          android:lineSpacingExtra="2sp"
-                          tools:text="The safety numbers for your conversation with Masha have changed. This could either mean that someone is trying to intercept your communication, or that Masha simply re-installed Signal. You may wish to verify safety numbers for this contact."/>
+                <TextView
+                    android:id="@+id/untrusted_explanation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/manrope_medium"
+                    android:lineSpacingExtra="2sp"
+                    android:maxWidth="270dp"
+                    android:textSize="16sp"
+                    tools:text="The safety numbers for your conversation with Masha have changed. This could either mean that someone is trying to intercept your communication, or that Masha simply re-installed Signal. You may wish to verify safety numbers for this contact." />
 
                 <LinearLayout
                         android:layout_marginTop="20dp"
@@ -73,16 +75,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
 
-                    <Button android:id="@+id/accept_safety_numbers"
-                            android:text="@string/WebRtcCallScreen_accept"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="10dp"/>
+                    <Button
+                        android:id="@+id/accept_safety_numbers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/manrope_medium"
+                        android:text="@string/WebRtcCallScreen_accept" />
 
-                    <Button android:id="@+id/cancel_safety_numbers"
-                            android:text="@android:string/cancel"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                    <Button
+                        android:id="@+id/cancel_safety_numbers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_medium"
+                        android:text="@android:string/cancel" />
 
                 </LinearLayout>
 
@@ -115,19 +121,20 @@
 
 
                 <!-- Name (or the phone number, if we don't have a name to display). -->
-                <TextView android:id="@+id/name"
-                          android:layout_alignParentTop="true"
-                          android:layout_alignParentStart="true"
-                          android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
-                          android:paddingEnd="50sp"
-                          android:textSize="40sp"
-                          android:textColor="#FFFFFF"
-                          android:singleLine="true"
-                          android:maxLines="1"
-                          android:ellipsize="end"
-                          tools:text="Ali Connors"
-                        />
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/manrope_medium"
+                    android:maxLines="1"
+                    android:paddingEnd="50sp"
+                    android:singleLine="true"
+                    android:textColor="#FFFFFF"
+                    android:textSize="40sp"
+                    tools:text="Ali Connors" />
 
                 <!-- Label (like "Mobile" or "Work", if present) and phone number, side by side -->
                 <LinearLayout android:id="@+id/labelAndNumber"
@@ -137,36 +144,41 @@
                               android:paddingEnd="50sp"
                               android:orientation="horizontal"
                         >
-                    <TextView android:id="@+id/label"
-                              android:layout_width="wrap_content"
-                              android:layout_height="wrap_content"
-                              android:textColor="#FFFFFF"
-                              android:singleLine="true"
-                              android:textAppearance="?android:attr/textAppearanceSmall"
-                              android:text="@string/redphone_call_card__signal_call"
-                              android:layout_marginEnd="10dp"
-                            />
-                    <TextView android:id="@+id/phoneNumber"
-                              android:layout_width="wrap_content"
-                              android:layout_height="wrap_content"
-                              android:textAppearance="?android:attr/textAppearanceSmall"
-                              android:textColor="#FFFFFF"
-                              android:singleLine="true"
-                              tools:text="+14152222222"
-                            />
+
+                    <TextView
+                        android:id="@+id/label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/manrope_medium"
+                        android:singleLine="true"
+                        android:text="@string/redphone_call_card__signal_call"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#FFFFFF" />
+
+                    <TextView
+                        android:id="@+id/phoneNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_medium"
+                        android:singleLine="true"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#FFFFFF"
+                        tools:text="+14152222222" />
 
                 </LinearLayout>
 
                 <!-- Elapsed time indication for a call in progress. -->
-                <TextView android:id="@+id/elapsedTime"
-                          android:layout_alignParentEnd="true"
-                          android:layout_centerVertical="true"
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:textAppearance="?android:attr/textAppearanceMedium"
-                          android:textColor="#FFFFFF"
-                          android:singleLine="true"
-                        />
+                <TextView
+                    android:id="@+id/elapsedTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/manrope_medium"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFFFFF" />
 
             </RelativeLayout>
 
@@ -181,19 +193,20 @@
                     android:paddingBottom="20dp"
                     android:clickable="true"/>
 
-            <TextView android:id="@+id/callStateLabel"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:gravity="right"
-                      android:paddingTop="8dp"
-                      android:paddingBottom="8dp"
-                      android:paddingEnd="24dp"
-                      android:textAppearance="?android:attr/textAppearanceSmall"
-                      android:textColor="#FFFFFF"
-                      android:textAllCaps="true"
-                      android:background="#8033b5e5"
-                      tools:text="connected"
-                    />
+            <TextView
+                android:id="@+id/callStateLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#8033b5e5"
+                android:fontFamily="@font/manrope_medium"
+                android:gravity="right"
+                android:paddingTop="8dp"
+                android:paddingEnd="24dp"
+                android:paddingBottom="8dp"
+                android:textAllCaps="true"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#FFFFFF"
+                tools:text="connected" />
 
         </LinearLayout>  <!-- End of call_banner for call_info #1. -->
 

@@ -16,13 +16,14 @@
             android:scaleType="fitCenter"/>
 
     <TextView
-            android:id="@+id/expiration_badge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center_horizontal"
-            android:gravity="center_horizontal|bottom"
-            android:paddingBottom="3dp"
-            android:paddingTop="1dp"
-            android:textColor="@android:color/white"
-            android:textSize="10sp" />
+        android:id="@+id/expiration_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:fontFamily="@font/manrope_medium"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="1dp"
+        android:paddingBottom="3dp"
+        android:textColor="@android:color/white"
+        android:textSize="10sp" />
 </FrameLayout>

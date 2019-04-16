@@ -35,14 +35,15 @@
 
             <org.thoughtcrime.securesms.components.emoji.EmojiTextView
                 android:id="@+id/media_preview_caption"
+                style="@style/Signal.Text.Body"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="bottom"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 android:paddingBottom="8dp"
-                style="@style/Signal.Text.Body"
                 android:textColor="@color/core_white"
-                android:gravity="bottom"
+                app:fontFamily="@font/manrope_medium"
                 tools:text="With great power comes great responsibility." />
 
         </org.thoughtcrime.securesms.components.MaxHeightScrollView>
