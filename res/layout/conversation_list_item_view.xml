@@ -65,7 +65,6 @@
             android:ellipsize="end"
             android:fontFamily="sans-serif-medium"
             android:maxLines="1"
-            android:textColor="@color/conversation_contact_new"
             app:fontFamily="@font/manrope_medium"
             tools:text="Jules Bonnot" />
 
