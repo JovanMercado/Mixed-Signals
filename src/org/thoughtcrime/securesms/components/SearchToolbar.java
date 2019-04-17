@@ -49,7 +49,7 @@ public class SearchToolbar extends LinearLayout {
 
     Drawable drawable = getContext().getResources().getDrawable(R.drawable.ic_arrow_back_white_24dp);
     drawable.mutate();
-    drawable.setColorFilter(getContext().getResources().getColor(R.color.grey_700), PorterDuff.Mode.SRC_IN);
+    //drawable.setColorFilter(getContext().getResources().getColor(R.color.colorTextPrimary), PorterDuff.Mode.SRC_IN);
 
     toolbar.setNavigationIcon(drawable);
     toolbar.inflateMenu(R.menu.conversation_list_search);

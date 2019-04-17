@@ -34,37 +34,43 @@
                 android:paddingEnd="10dp"
                 android:gravity="center">
 
-                <ImageView android:id="@+id/search_dialpad"
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:layout_gravity="center_vertical"
-                           android:gravity="center_vertical"
-                           android:clickable="true"
-                           android:focusable="true"
-                           android:background="@drawable/circle_touch_highlight_background"
-                           android:src="@drawable/ic_dialpad_white_24dp" />
+                <ImageView
+                    android:id="@+id/search_dialpad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/circle_touch_highlight_background"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/ic_dialpad_white_24dp"
+                    android:tint="?attr/actionMenuTextColor" />
 
-                <ImageView android:id="@+id/search_keyboard"
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:layout_gravity="center_vertical"
-                           android:gravity="center_vertical"
-                           android:clickable="true"
-                           android:visibility="gone"
-                           android:focusable="true"
-                           android:background="@drawable/circle_touch_highlight_background"
-                           android:src="@drawable/ic_keyboard_white_24dp" />
+                <ImageView
+                    android:id="@+id/search_keyboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/circle_touch_highlight_background"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/ic_keyboard_white_24dp"
+                    android:tint="?attr/actionMenuTextColor"
+                    android:visibility="gone" />
 
-                <ImageView android:id="@+id/search_clear"
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:layout_gravity="center_vertical"
-                           android:gravity="center_vertical"
-                           android:clickable="true"
-                           android:visibility="gone"
-                           android:focusable="true"
-                           android:background="@drawable/circle_touch_highlight_background"
-                           android:src="@drawable/ic_clear_white_24dp" />
+                <ImageView
+                    android:id="@+id/search_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/circle_touch_highlight_background"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/ic_clear_white_24dp"
+                    android:tint="?attr/actionMenuTextColor"
+                    android:visibility="gone" />
 
             </org.thoughtcrime.securesms.components.AnimatingToggle>
 

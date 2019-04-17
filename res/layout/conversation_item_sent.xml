@@ -112,13 +112,14 @@
                 android:id="@+id/group_sender_holder"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/group_message_sender"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif"
+                android:paddingTop="2dp"
                 android:visibility="gone" />
 
             <TextView
@@ -126,6 +127,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif"
+                android:paddingTop="2dp"
                 android:visibility="gone" />
 
             <org.thoughtcrime.securesms.components.ConversationItemFooter

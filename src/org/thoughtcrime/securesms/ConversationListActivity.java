@@ -21,15 +21,20 @@ import android.annotation.SuppressLint;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v7.widget.Toolbar;
 import android.support.v7.widget.TooltipCompat;
 import android.text.TextUtils;
+import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -40,6 +45,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.load.engine.Resource;
 
 import org.thoughtcrime.securesms.color.MaterialColor;
 import org.thoughtcrime.securesms.components.RatingManager;
@@ -134,6 +140,25 @@ public class ConversationListActivity extends PassphraseRequiredActionBarActivit
     inflater.inflate(R.menu.text_secure_normal, menu);
 
     menu.findItem(R.id.menu_clear_passphrase).setVisible(!TextSecurePreferences.isPasswordDisabled(this));
+
+    TypedValue typedValue = new TypedValue();
+    Resources.Theme theme = this.getTheme();
+    theme.resolveAttribute(R.attr.actionMenuTextColor, typedValue, true);
+    @ColorInt int colorParsed = typedValue.data;
+
+    for (int i =0; i < menu.size(); i++ ) {
+      MenuItem menuItem = menu.getItem(i);
+
+      Drawable icon = menuItem.getIcon();
+      if (icon != null) {
+        DrawableCompat.setTint(icon,colorParsed);
+
+      }
+    }
+
+     final Drawable upArrow = getResources().getDrawable(R.drawable.abc_ic_ab_back_material);
+     upArrow.setColorFilter(getResources().getColor(R.color.signal_primary), PorterDuff.Mode.SRC_ATOP);
+     getSupportActionBar().setHomeAsUpIndicator(upArrow);
 
     super.onPrepareOptionsMenu(menu);
     return true;

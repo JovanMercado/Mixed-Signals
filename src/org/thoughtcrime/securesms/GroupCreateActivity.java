@@ -19,17 +19,23 @@ package org.thoughtcrime.securesms;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.graphics.drawable.DrawableCompat;
 import android.text.TextUtils;
 
 import org.thoughtcrime.securesms.avatar.AvatarSelection;
 import org.thoughtcrime.securesms.conversation.ConversationActivity;
 import org.thoughtcrime.securesms.logging.Log;
+
+import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -207,6 +213,21 @@ public class GroupCreateActivity extends PassphraseRequiredActionBarActivity
     menu.clear();
 
     inflater.inflate(R.menu.group_create, menu);
+
+    TypedValue typedValue = new TypedValue();
+    Resources.Theme theme = this.getTheme();
+    theme.resolveAttribute(R.attr.actionMenuTextColor, typedValue, true);
+    @ColorInt int colorParsed = typedValue.data;
+
+    for (int i =0; i < menu.size(); i++ ) {
+      MenuItem menuItem = menu.getItem(i);
+
+      Drawable icon = menuItem.getIcon();
+      if (icon != null) {
+        DrawableCompat.setTint(icon,colorParsed);
+      }
+    }
+
     super.onPrepareOptionsMenu(menu);
     return true;
   }

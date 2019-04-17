@@ -248,4 +248,9 @@
         <item name="colorControlActivated">@color/white</item>
     </style>
 
+    <style name="actionOverflowButtonStyle" parent="@style/Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:tint">@color/white</item>
+    </style>
+
+
 </resources>

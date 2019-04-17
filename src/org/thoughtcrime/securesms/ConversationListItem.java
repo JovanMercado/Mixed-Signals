@@ -179,7 +179,7 @@ public class ConversationListItem extends RelativeLayout
     setStatusIcons(thread);
     setThumbnailSnippet(thread);
     setBatchState(batchMode);
-    setRippleColor(recipient);
+    //setRippleColor(recipient);
     setUnreadIndicator(thread);
     this.contactPhotoImage.setAvatar(glideRequests, recipient, true);
   }
@@ -207,7 +207,7 @@ public class ConversationListItem extends RelativeLayout
     thumbnailView.setVisibility(GONE);
 
     setBatchState(false);
-    setRippleColor(contact);
+    //setRippleColor(contact);
     contactPhotoImage.setAvatar(glideRequests, recipient, true);
   }
 
@@ -232,7 +232,7 @@ public class ConversationListItem extends RelativeLayout
     thumbnailView.setVisibility(GONE);
 
     setBatchState(false);
-    setRippleColor(recipient);
+    //setRippleColor(recipient);
     contactPhotoImage.setAvatar(glideRequests, recipient, true);
   }
 
@@ -331,7 +331,7 @@ public class ConversationListItem extends RelativeLayout
     Util.runOnMain(() -> {
       fromView.setText(recipient, unreadCount == 0);
       contactPhotoImage.setAvatar(glideRequests, recipient, true);
-      setRippleColor(recipient);
+      //setRippleColor(recipient);
     });
   }
 

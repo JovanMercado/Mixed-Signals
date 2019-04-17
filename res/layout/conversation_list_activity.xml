@@ -49,9 +49,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:tint="@color/blue"
                 android:paddingEnd="16dp"
-                android:src="@drawable/ic_search_white_24dp" />
+                android:src="@drawable/ic_search_white_24dp"
+                android:tint="@color/blue" />
 
         </RelativeLayout>
 
@@ -65,12 +65,13 @@
         android:layout_marginTop="0dp" />
 
     <org.thoughtcrime.securesms.components.SearchToolbar
-            android:id="@+id/search_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:elevation="0dp"
-            android:visibility="invisible"
-            tools:visibility="visible"/>
+        android:id="@+id/search_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:elevation="0dp"
+        android:theme="@style/TextSecure.LightActionBar"
+        android:visibility="invisible"
+        tools:visibility="visible" />
 
 </RelativeLayout>
