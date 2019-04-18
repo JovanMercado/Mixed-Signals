@@ -163,7 +163,7 @@
                 android:textColor="?conversation_item_received_text_primary_color"
                 android:textColorLink="?conversation_item_received_text_primary_color"
                 app:emoji_maxLength="1000"
-                app:fontFamily="@font/manrope_medium"
+                app:fontFamily="@font/manrope_regular"
                 app:scaleEmojis="true"
                 tools:text="Mango pickle lorem ipsum" />
 
