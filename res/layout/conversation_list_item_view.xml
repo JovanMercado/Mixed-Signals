@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<org.MixedSignals.resignal.ConversationListItem
+<org.thoughtcrime.securesms.ConversationListItem
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -20,7 +20,7 @@
         android:layout_centerVertical="true"
         android:layout_marginEnd="6dp">
 
-        <org.MixedSignals.resignal.components.AvatarImageView
+        <org.thoughtcrime.securesms.components.AvatarImageView
             android:id="@+id/contact_photo_image"
             android:layout_width="40dp"
             android:layout_height="40dp"
@@ -52,7 +52,7 @@
                   android:weightSum="1"
                   android:orientation="horizontal">
 
-        <org.MixedSignals.resignal.components.FromTextView
+        <org.thoughtcrime.securesms.components.FromTextView
             android:id="@+id/from"
             style="@style/Signal.Text.Body"
             android:layout_width="match_parent"
@@ -68,7 +68,7 @@
             app:fontFamily="@font/manrope_medium"
             tools:text="Jules Bonnot" />
 
-        <org.MixedSignals.resignal.components.AlertView
+        <org.thoughtcrime.securesms.components.AlertView
                 android:id="@+id/indicators_parent"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
@@ -89,7 +89,7 @@
             android:layout_toEndOf="@id/indicators_parent"
             android:layout_toStartOf="@+id/status">
 
-            <org.MixedSignals.resignal.components.emoji.EmojiTextView
+            <org.thoughtcrime.securesms.components.emoji.EmojiTextView
                 android:id="@+id/subject"
                 style="@style/Signal.Text.Preview"
                 android:layout_width="match_parent"
@@ -100,7 +100,7 @@
                 app:fontFamily="sans-serif"
                 tools:text="Wheels arrive at 3pm flat. This is a somewhat longer message." />
 
-            <org.MixedSignals.resignal.components.TypingIndicatorView
+            <org.thoughtcrime.securesms.components.TypingIndicatorView
                 android:id="@+id/typing_indicator"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -110,7 +110,7 @@
 
         </FrameLayout>
 
-        <org.MixedSignals.resignal.components.ThumbnailView
+        <org.thoughtcrime.securesms.components.ThumbnailView
                 android:id="@+id/thumbnail"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
@@ -167,7 +167,7 @@
                      android:layout_toStartOf="@id/archived"
                      android:layout_alignWithParentIfMissing="true">
 
-            <org.MixedSignals.resignal.components.DeliveryStatusView
+            <org.thoughtcrime.securesms.components.DeliveryStatusView
                     android:id="@+id/delivery_status"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -178,4 +178,4 @@
 
     </RelativeLayout>
 
-</org.MixedSignals.resignal.ConversationListItem>
+</org.thoughtcrime.securesms.ConversationListItem>

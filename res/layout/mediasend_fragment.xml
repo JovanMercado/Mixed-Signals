@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/core_black">
 
-    <org.MixedSignals.resignal.components.ControllableViewPager
+    <org.thoughtcrime.securesms.components.ControllableViewPager
         android:id="@+id/mediasend_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
@@ -19,7 +19,7 @@
         android:animateLayoutChanges="true"
         android:layout_gravity="top"/>
 
-    <org.MixedSignals.resignal.components.InputAwareLayout
+    <org.thoughtcrime.securesms.components.InputAwareLayout
         android:id="@+id/mediasend_hud"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -31,7 +31,7 @@
             android:orientation="vertical"
             android:background="@color/transparent_black_70">
 
-            <org.MixedSignals.resignal.components.emoji.EmojiEditText
+            <org.thoughtcrime.securesms.components.emoji.EmojiEditText
                 android:id="@+id/mediasend_caption"
                 style="@style/Signal.Text.Body"
                 android:layout_width="match_parent"
@@ -76,7 +76,7 @@
                     android:orientation="horizontal"
                     android:background="@drawable/compose_background_camera">
 
-                    <org.MixedSignals.resignal.components.emoji.EmojiToggle
+                    <org.thoughtcrime.securesms.components.emoji.EmojiToggle
                         android:id="@+id/mediasend_emoji_toggle"
                         android:layout_width="wrap_content"
                         android:layout_height="@dimen/conversation_compose_height"
@@ -90,7 +90,7 @@
                         android:layout_width="0dp"
                         android:layout_height="@dimen/conversation_compose_height" />
 
-                    <org.MixedSignals.resignal.components.ComposeText
+                    <org.thoughtcrime.securesms.components.ComposeText
                         android:id="@+id/mediasend_compose_text"
                         style="@style/ComposeEditText"
                         android:layout_width="0dp"
@@ -103,7 +103,7 @@
                         tools:hint="Send TextSecure message">
 
                         <requestFocus />
-                    </org.MixedSignals.resignal.components.ComposeText>
+                    </org.thoughtcrime.securesms.components.ComposeText>
 
                 </LinearLayout>
 
@@ -116,7 +116,7 @@
                     android:background="@drawable/circle_tintable"
                     tools:backgroundTint="@color/core_blue">
 
-                    <org.MixedSignals.resignal.components.SendButton
+                    <org.thoughtcrime.securesms.components.SendButton
                         android:id="@+id/mediasend_send_button"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -154,6 +154,6 @@
 
         </LinearLayout>
 
-    </org.MixedSignals.resignal.components.InputAwareLayout>
+    </org.thoughtcrime.securesms.components.InputAwareLayout>
 
 </FrameLayout>

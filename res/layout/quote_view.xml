@@ -38,7 +38,7 @@
                 android:orientation="vertical"
                 android:layout_weight="1">
 
-                <org.MixedSignals.resignal.components.emoji.EmojiTextView
+                <org.thoughtcrime.securesms.components.emoji.EmojiTextView
                     android:id="@+id/quote_author"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -93,7 +93,7 @@
                     tools:text="Photo"
                     tools:visibility="visible" />
 
-                <org.MixedSignals.resignal.components.emoji.EmojiTextView
+                <org.thoughtcrime.securesms.components.emoji.EmojiTextView
                     android:id="@+id/quote_text"
                     style="@style/Signal.Text.Body"
                     android:layout_width="wrap_content"

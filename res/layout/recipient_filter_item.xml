@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <org.MixedSignals.resignal.components.emoji.EmojiTextView
+        <org.thoughtcrime.securesms.components.emoji.EmojiTextView
             android:id="@+id/name"
             style="?android:attr/dropDownItemStyle"
             android:layout_width="wrap_content"

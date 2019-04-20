@@ -100,7 +100,7 @@
                 android:paddingEnd="40dp"
                 android:singleLine="true" />
 
-            <org.MixedSignals.resignal.components.AnimatingToggle
+            <org.thoughtcrime.securesms.components.AnimatingToggle
                     android:id="@+id/button_toggle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -131,7 +131,7 @@
                              android:paddingBottom="3dp"
                              android:layout_centerVertical="true" />
 
-            </org.MixedSignals.resignal.components.AnimatingToggle>
+            </org.thoughtcrime.securesms.components.AnimatingToggle>
 
             <ImageButton android:id="@+id/ok_button"
                          android:src="?ic_arrow_forward"
