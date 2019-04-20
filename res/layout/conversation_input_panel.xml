@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<org.thoughtcrime.securesms.components.InputPanel
+<org.MixedSignals.resignal.components.InputPanel
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -32,7 +32,7 @@
             android:clipToPadding="false"
             android:orientation="vertical">
 
-            <org.thoughtcrime.securesms.components.QuoteView
+            <org.MixedSignals.resignal.components.QuoteView
                 android:id="@+id/quote_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
                 app:quote_colorSecondary="?attr/conversation_item_sent_text_primary_color"
                 tools:visibility="visible"/>
 
-            <org.thoughtcrime.securesms.components.LinkPreviewView
+            <org.MixedSignals.resignal.components.LinkPreviewView
                 android:id="@+id/link_preview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -68,7 +68,7 @@
                     android:clipChildren="false"
                     android:clipToPadding="false">
 
-                    <org.thoughtcrime.securesms.components.emoji.EmojiToggle
+                    <org.MixedSignals.resignal.components.emoji.EmojiToggle
                         android:id="@+id/emoji_toggle"
                         android:layout_width="wrap_content"
                         android:layout_height="@dimen/conversation_compose_height"
@@ -82,21 +82,21 @@
                         android:layout_width="0dp"
                         android:layout_height="@dimen/conversation_compose_height" />
 
-                    <org.thoughtcrime.securesms.components.ComposeText
+                    <org.MixedSignals.resignal.components.ComposeText
                         android:id="@+id/embedded_text_editor"
                         style="@style/ComposeEditText"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
-                        android:fontFamily="@font/manrope_medium"
+                        android:fontFamily="@font/roboto_regular"
                         android:nextFocusRight="@+id/send_button"
                         android:nextFocusForward="@+id/send_button"
                         tools:hint="Send TextSecure message"
                         tools:visibility="invisible">
 
                         <requestFocus />
-                    </org.thoughtcrime.securesms.components.ComposeText>
+                    </org.MixedSignals.resignal.components.ComposeText>
 
                     <FrameLayout
                         android:layout_width="wrap_content"
@@ -104,7 +104,7 @@
                         android:clipChildren="false"
                         android:clipToPadding="false">
 
-                        <org.thoughtcrime.securesms.components.HidingLinearLayout
+                        <org.MixedSignals.resignal.components.HidingLinearLayout
                             android:id="@+id/quick_attachment_toggle"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -123,7 +123,7 @@
                                 android:background="?selectableItemBackgroundBorderless"
                                 android:contentDescription="@string/conversation_activity__quick_attachment_drawer_toggle_camera_description" />
 
-                            <org.thoughtcrime.securesms.components.MicrophoneRecorderView
+                            <org.MixedSignals.resignal.components.MicrophoneRecorderView
                                 android:id="@+id/recorder_view"
                                 android:layout_height="match_parent"
                                 android:layout_width="36dp"
@@ -133,11 +133,11 @@
 
                                 <include layout="@layout/microphone_recorder_view" />
 
-                            </org.thoughtcrime.securesms.components.MicrophoneRecorderView>
+                            </org.MixedSignals.resignal.components.MicrophoneRecorderView>
 
-                        </org.thoughtcrime.securesms.components.HidingLinearLayout>
+                        </org.MixedSignals.resignal.components.HidingLinearLayout>
 
-                        <org.thoughtcrime.securesms.components.HidingLinearLayout
+                        <org.MixedSignals.resignal.components.HidingLinearLayout
                             android:id="@+id/inline_attachment_container"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -154,7 +154,7 @@
                                 android:tint="?attr/conversation_input_inline_attach_icon_tint"
                                 android:background="?selectableItemBackgroundBorderless"/>
 
-                        </org.thoughtcrime.securesms.components.HidingLinearLayout>
+                        </org.MixedSignals.resignal.components.HidingLinearLayout>
 
                     </FrameLayout>
 
@@ -168,7 +168,7 @@
 
     </FrameLayout>
 
-    <org.thoughtcrime.securesms.components.AnimatingToggle
+    <org.MixedSignals.resignal.components.AnimatingToggle
         android:id="@+id/button_toggle"
         android:layout_width="@dimen/conversation_compose_height"
         android:layout_height="@dimen/conversation_compose_height"
@@ -186,7 +186,7 @@
             android:contentDescription="@string/ConversationActivity_add_attachment"
             android:nextFocusLeft="@+id/embedded_text_editor" />
 
-        <org.thoughtcrime.securesms.components.SendButton
+        <org.MixedSignals.resignal.components.SendButton
             android:id="@+id/send_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -200,5 +200,5 @@
             android:src="?conversation_transport_sms_indicator"
             android:background="@drawable/circle_touch_highlight_background" />
 
-    </org.thoughtcrime.securesms.components.AnimatingToggle>
-</org.thoughtcrime.securesms.components.InputPanel>
+    </org.MixedSignals.resignal.components.AnimatingToggle>
+</org.MixedSignals.resignal.components.InputPanel>
