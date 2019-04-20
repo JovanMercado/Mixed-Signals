@@ -1,0 +1,48 @@
+package org.mixedsignals.resignal.jobmanager.impl;
+
+import android.app.Application;
+import android.app.job.JobInfo;
+import android.support.annotation.NonNull;
+
+import org.mixedsignals.resignal.jobmanager.Constraint;
+import org.mixedsignals.resignal.sms.TelephonyServiceState;
+
+public class CellServiceConstraint implements Constraint {
+
+  public static final String KEY = "CellServiceConstraint";
+
+  private final Application application;
+
+  public CellServiceConstraint(@NonNull Application application) {
+    this.application = application;
+  }
+
+  @Override
+  public @NonNull String getFactoryKey() {
+    return KEY;
+  }
+
+  @Override
+  public boolean isMet() {
+    TelephonyServiceState telephonyServiceState = new TelephonyServiceState();
+    return telephonyServiceState.isConnected(application);
+  }
+
+  @Override
+  public void applyToJobInfo(@NonNull JobInfo.Builder jobInfoBuilder) {
+  }
+
+  public static final class Factory implements Constraint.Factory<CellServiceConstraint> {
+
+    private final Application application;
+
+    public Factory(@NonNull Application application) {
+      this.application = application;
+    }
+
+    @Override
+    public CellServiceConstraint create() {
+      return new CellServiceConstraint(application);
+    }
+  }
+}
