@@ -25,7 +25,7 @@
                 android:textCursorDrawable="@null"
                 android:textSize="18sp" />
 
-            <org.thoughtcrime.securesms.components.AnimatingToggle
+            <org.mixedsignals.resignal.components.AnimatingToggle
                 android:id="@+id/button_toggle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -72,7 +72,7 @@
                     android:tint="?attr/actionMenuTextColor"
                     android:visibility="gone" />
 
-            </org.thoughtcrime.securesms.components.AnimatingToggle>
+            </org.mixedsignals.resignal.components.AnimatingToggle>
 
         </LinearLayout>
 

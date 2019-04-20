@@ -6,7 +6,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical" >
 
-        <org.thoughtcrime.securesms.contacts.RecipientsEditor
+        <org.mixedsignals.resignal.contacts.RecipientsEditor
             android:id="@+id/recipients_text"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
