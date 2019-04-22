@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
-          package="org.mixedsignals.resignal">
+          package="org.thoughtcrime.securesms">
 
     <uses-sdk tools:overrideLibrary="com.amulyakhare.textdrawable,com.astuetz.pagerslidingtabstrip,pl.tajchert.waitingdots,com.h6ah4i.android.multiselectlistpreferencecompat,android.support.v13,com.davemorrissey.labs.subscaleview,com.tomergoldst.tooltips,com.klinker.android.send_message,com.takisoft.colorpicker,android.support.v14.preference"/>
 
-    <permission android:name="org.mixedsignals.resignal.ACCESS_SECRETS"
+    <permission android:name="org.thoughtcrime.securesms.ACCESS_SECRETS"
                 android:label="Access to TextSecure Secrets"
                 android:protectionLevel="signature" />
 
@@ -20,7 +20,7 @@
     <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
 
     <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
-    <uses-permission android:name="org.mixedsignals.resignal.ACCESS_SECRETS"/>
+    <uses-permission android:name="org.thoughtcrime.securesms.ACCESS_SECRETS"/>
     <uses-permission android:name="android.permission.READ_PROFILE"/>
     <uses-permission android:name="android.permission.WRITE_PROFILE"/>
     <uses-permission android:name="android.permission.BROADCAST_WAP_PUSH"
@@ -87,7 +87,7 @@
     <uses-permission android:name="android.permission.RAISED_THREAD_PRIORITY" />
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
 
-    <application android:name="org.mixedsignals.resignal.ApplicationContext"
+    <application android:name=".ApplicationContext"
                  android:icon="@mipmap/ic_launcher"
                  android:label="@string/app_name"
                  android:supportsRtl="true"
@@ -110,31 +110,31 @@
     <meta-data android:name="google_analytics_adid_collection_enabled" android:value="false" />
     <meta-data android:name="firebase_messaging_auto_init_enabled" android:value="false" />
 
-    <activity android:name="org.mixedsignals.resignal.WebRtcCallActivity"
+    <activity android:name="org.thoughtcrime.securesms.WebRtcCallActivity"
               android:excludeFromRecents="true"
               android:screenOrientation="portrait"
               android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|screenSize|fontScale"
               android:launchMode="singleTask"/>
 
-    <activity android:name="org.mixedsignals.resignal.CountrySelectionActivity"
+    <activity android:name=".CountrySelectionActivity"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name="org.mixedsignals.resignal.InviteActivity"
+    <activity android:name=".InviteActivity"
               android:theme="@style/TextSecure.HighlightTheme"
               android:windowSoftInputMode="stateHidden"
-              android:parentActivityName="org.mixedsignals.resignal.ConversationListActivity"
+              android:parentActivityName=".ConversationListActivity"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize">
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
-            android:value="org.mixedsignals.resignal.ConversationListActivity" />
+            android:value="org.thoughtcrime.securesms.ConversationListActivity" />
     </activity>
 
-    <activity android:name="org.mixedsignals.resignal.PromptMmsActivity"
+    <activity android:name=".PromptMmsActivity"
               android:label="Configure MMS Settings"
               android:windowSoftInputMode="stateUnchanged"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name="org.mixedsignals.resignal.DeviceProvisioningActivity"
+    <activity android:name=".DeviceProvisioningActivity"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize">
         <intent-filter>
             <action android:name="android.intent.action.VIEW" />
@@ -144,10 +144,10 @@
         </intent-filter>
     </activity>
 
-    <activity android:name="org.mixedsignals.resignal.preferences.MmsPreferencesActivity"
+    <activity android:name=".preferences.MmsPreferencesActivity"
                android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name="org.mixedsignals.resignal.ShareActivity"
+    <activity android:name=".ShareActivity"
               android:theme="@style/TextSecure.LightNoActionBar"
               android:excludeFromRecents="true"
               android:launchMode="singleTask"
@@ -174,7 +174,7 @@
 
     </activity>
 
-    <activity android:name="org.mixedsignals.resignal.ConversationListActivity"
+    <activity android:name=".ConversationListActivity"
               android:label="@string/app_name"
               android:launchMode="singleTask"
               android:theme="@style/TextSecure.LightNoActionBar"
@@ -182,7 +182,7 @@
               android:exported="true" />
 
     <activity-alias android:name=".RoutingActivity"
-                    android:targetActivity="org.mixedsignals.resignal.ConversationListActivity"
+                    android:targetActivity=".ConversationListActivity"
                     android:exported="true">
 
         <intent-filter>
@@ -198,29 +198,29 @@
 
     </activity-alias>
 
-    <activity android:name="org.mixedsignals.resignal.ConversationListArchiveActivity"
+    <activity android:name=".ConversationListArchiveActivity"
               android:label="@string/AndroidManifest_archived_conversations"
               android:launchMode="singleTask"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"
-              android:parentActivityName="org.mixedsignals.resignal.ConversationListActivity">
+              android:parentActivityName=".ConversationListActivity">
         <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.mixedsignals.resignal.ConversationListActivity" />
+                android:value="org.thoughtcrime.securesms.ConversationListActivity" />
     </activity>
 
-    <activity android:name="org.mixedsignals.resignal.conversation.ConversationActivity"
+    <activity android:name=".conversation.ConversationActivity"
               android:windowSoftInputMode="stateUnchanged"
               android:launchMode="singleTask"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"
-              android:parentActivityName="org.mixedsignals.resignal.ConversationListActivity">
+              android:parentActivityName=".ConversationListActivity">
         <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.mixedsignals.resignal.ConversationListActivity" />
+                android:value="org.thoughtcrime.securesms.ConversationListActivity" />
     </activity>
 
-    <activity android:name="org.mixedsignals.resignal.longmessage.LongMessageActivity" />
+    <activity android:name=".longmessage.LongMessageActivity" />
 
-    <activity android:name="org.mixedsignals.resignal.conversation.ConversationPopupActivity"
+    <activity android:name=".conversation.ConversationPopupActivity"
               android:windowSoftInputMode="stateVisible"
               android:launchMode="singleTask"
               android:taskAffinity=""
@@ -228,71 +228,71 @@
               android:theme="@style/TextSecure.LightTheme.Popup"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" />
 
-    <activity android:name="org.mixedsignals.resignal.MessageDetailsActivity"
+    <activity android:name=".MessageDetailsActivity"
               android:label="@string/AndroidManifest__message_details"
               android:windowSoftInputMode="stateHidden"
               android:launchMode="singleTask"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name="org.mixedsignals.resignal.GroupCreateActivity"
+    <activity android:name=".GroupCreateActivity"
           android:windowSoftInputMode="stateVisible"
           android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name="org.mixedsignals.resignal.DatabaseMigrationActivity"
+    <activity android:name=".DatabaseMigrationActivity"
               android:theme="@style/NoAnimation.Theme.AppCompat.Light.DarkActionBar"
               android:launchMode="singleTask"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name="org.mixedsignals.resignal.DatabaseUpgradeActivity"
+    <activity android:name=".DatabaseUpgradeActivity"
               android:theme="@style/NoAnimation.Theme.AppCompat.Light.DarkActionBar"
               android:launchMode="singleTask"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name="org.mixedsignals.resignal.ExperienceUpgradeActivity"
+    <activity android:name=".ExperienceUpgradeActivity"
               android:theme="@style/Theme.AppCompat.Light.NoActionBar"
               android:launchMode="singleTask"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name="org.mixedsignals.resignal.PassphraseCreateActivity"
+    <activity android:name=".PassphraseCreateActivity"
               android:label="@string/AndroidManifest__create_passphrase"
               android:windowSoftInputMode="stateUnchanged"
               android:theme="@style/TextSecure.LightNoActionBar"
               android:launchMode="singleTask"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name="org.mixedsignals.resignal.PassphrasePromptActivity"
+    <activity android:name=".PassphrasePromptActivity"
               android:launchMode="singleTask"
               android:theme="@style/TextSecure.LightIntroTheme"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name="org.mixedsignals.resignal.NewConversationActivity"
+    <activity android:name=".NewConversationActivity"
               android:theme="@style/TextSecure.LightNoActionBar"
               android:windowSoftInputMode="stateAlwaysVisible"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name="org.mixedsignals.resignal.PushContactSelectionActivity"
+    <activity android:name=".PushContactSelectionActivity"
           android:label="@string/AndroidManifest__select_contacts"
           android:windowSoftInputMode="stateHidden"
           android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name="org.mixedsignals.resignal.giph.ui.GiphyActivity"
+    <activity android:name=".giph.ui.GiphyActivity"
               android:theme="@style/TextSecure.LightNoActionBar"
               android:windowSoftInputMode="stateHidden"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-        <activity android:name="org.mixedsignals.resignal.mediasend.MediaSendActivity"
+        <activity android:name=".mediasend.MediaSendActivity"
                   android:theme="@style/TextSecure.DarkNoActionBar"
                   android:windowSoftInputMode="stateHidden"
                   android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name="org.mixedsignals.resignal.PassphraseChangeActivity"
+    <activity android:name=".PassphraseChangeActivity"
               android:label="@string/AndroidManifest__change_passphrase"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name="org.mixedsignals.resignal.VerifyIdentityActivity"
+    <activity android:name=".VerifyIdentityActivity"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name="org.mixedsignals.resignal.ApplicationPreferencesActivity"
+    <activity android:name=".ApplicationPreferencesActivity"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
@@ -300,46 +300,46 @@
         </intent-filter>
     </activity>
 
-    <activity android:name="org.mixedsignals.resignal.registration.WelcomeActivity"
+    <activity android:name=".registration.WelcomeActivity"
               android:launchMode="singleTask"
               android:theme="@style/TextSecure.LightRegistrationTheme"
               android:windowSoftInputMode="stateUnchanged"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name="org.mixedsignals.resignal.RegistrationActivity"
+    <activity android:name=".RegistrationActivity"
               android:launchMode="singleTask"
               android:theme="@style/TextSecure.LightRegistrationTheme"
               android:windowSoftInputMode="stateUnchanged"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name="org.mixedsignals.resignal.registration.CaptchaActivity"
+    <activity android:name=".registration.CaptchaActivity"
               android:launchMode="singleTask"
               android:theme="@style/TextSecure.LightNoActionBar"
               android:windowSoftInputMode="stateUnchanged"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-     <activity android:name="org.mixedsignals.resignal.DeviceActivity"
+     <activity android:name=".DeviceActivity"
                android:label="@string/AndroidManifest__linked_devices"
                android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name="org.mixedsignals.resignal.LogSubmitActivity"
+    <activity android:name=".LogSubmitActivity"
               android:label="@string/AndroidManifest__log_submit"
               android:windowSoftInputMode="stateHidden"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name="org.mixedsignals.resignal.MediaPreviewActivity"
+    <activity android:name=".MediaPreviewActivity"
               android:label="@string/AndroidManifest__media_preview"
               android:windowSoftInputMode="stateHidden"
               android:launchMode="singleTask"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name="org.mixedsignals.resignal.MediaOverviewActivity"
+    <activity android:name=".MediaOverviewActivity"
               android:theme="@style/TextSecure.LightNoActionBar"
               android:windowSoftInputMode="stateHidden"
               android:launchMode="singleTask"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name="org.mixedsignals.resignal.DummyActivity"
+    <activity android:name=".DummyActivity"
               android:theme="@android:style/Theme.NoDisplay"
               android:enabled="true"
               android:allowTaskReparenting="true"
@@ -350,11 +350,11 @@
               android:clearTaskOnLaunch="true"
               android:finishOnTaskLaunch="true" />
 
-    <activity android:name="org.mixedsignals.resignal.PlayServicesProblemActivity"
+    <activity android:name=".PlayServicesProblemActivity"
               android:theme="@style/TextSecure.DialogActivity"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name="org.mixedsignals.resignal.SmsSendtoActivity">
+    <activity android:name=".SmsSendtoActivity">
         <intent-filter>
             <action android:name="android.intent.action.SENDTO" />
             <action android:name="android.intent.action.VIEW" />
@@ -368,11 +368,11 @@
         <intent-filter>
             <action android:name="android.intent.action.VIEW" />
             <category android:name="android.intent.category.DEFAULT" />
-            <data android:mimeType="vnd.android.cursor.item/vnd.org.mixedsignals.resignal.contact" />
+            <data android:mimeType="vnd.android.cursor.item/vnd.org.thoughtcrime.securesms.contact" />
         </intent-filter>
     </activity>
 
-    <activity android:name="org.mixedsignals.resignal.webrtc.VoiceCallShare"
+    <activity android:name="org.thoughtcrime.securesms.webrtc.VoiceCallShare"
               android:excludeFromRecents="true"
               android:theme="@style/NoAnimation.Theme.BlackScreen"
               android:launchMode="singleTask"
@@ -381,66 +381,66 @@
         <intent-filter>
             <action android:name="android.intent.action.VIEW" />
             <category android:name="android.intent.category.DEFAULT" />
-            <data android:mimeType="vnd.android.cursor.item/vnd.org.mixedsignals.resignal.call" />
+            <data android:mimeType="vnd.android.cursor.item/vnd.org.thoughtcrime.securesms.call" />
         </intent-filter>
 
     </activity>
 
-    <activity android:name="org.mixedsignals.resignal.RecipientPreferenceActivity"
+    <activity android:name=".RecipientPreferenceActivity"
               android:theme="@style/TextSecure.LightNoActionBar"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name="org.mixedsignals.resignal.BlockedContactsActivity"
+    <activity android:name=".BlockedContactsActivity"
               android:theme="@style/TextSecure.LightTheme"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name="org.mixedsignals.resignal.scribbles.StickerSelectActivity"
+    <activity android:name=".scribbles.StickerSelectActivity"
               android:theme="@style/TextSecure.DarkTheme"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
     <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
               android:theme="@style/TextSecure.DarkTheme"/>
 
-    <activity android:name="org.mixedsignals.resignal.CreateProfileActivity"
+    <activity android:name=".CreateProfileActivity"
               android:theme="@style/TextSecure.LightRegistrationTheme"
               android:windowSoftInputMode="stateVisible"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name="org.mixedsignals.resignal.ClearProfileAvatarActivity"
+    <activity android:name=".ClearProfileAvatarActivity"
               android:theme="@style/Theme.AppCompat.Dialog.Alert"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"
               android:icon="@drawable/clear_profile_avatar"
               android:label="@string/AndroidManifest_remove_photo">
 
         <intent-filter>
-            <action android:name="org.mixedsignals.resignal.action.CLEAR_PROFILE_PHOTO"/>
+            <action android:name="org.thoughtcrime.securesms.action.CLEAR_PROFILE_PHOTO"/>
             <category android:name="android.intent.category.DEFAULT"/>
         </intent-filter>
     </activity>
 
-    <activity android:name="org.mixedsignals.resignal.contactshare.ContactShareEditActivity"
+    <activity android:name=".contactshare.ContactShareEditActivity"
               android:theme="@style/TextSecure.LightTheme"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name="org.mixedsignals.resignal.contactshare.ContactNameEditActivity"
+    <activity android:name=".contactshare.ContactNameEditActivity"
               android:theme="@style/TextSecure.LightNoActionBar"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name="org.mixedsignals.resignal.contactshare.SharedContactDetailsActivity"
+    <activity android:name=".contactshare.SharedContactDetailsActivity"
               android:theme="@style/TextSecure.LightNoActionBar"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name="org.mixedsignals.resignal.ShortcutLauncherActivity"
+    <activity android:name=".ShortcutLauncherActivity"
               android:theme="@style/TextSecure.LightNoActionBar"
               android:exported="true"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <service android:enabled="true" android:name="org.mixedsignals.resignal.service.WebRtcCallService"/>
-    <service android:enabled="true" android:name="org.mixedsignals.resignal.service.ApplicationMigrationService"/>
-    <service android:enabled="true" android:exported="false" android:name="org.mixedsignals.resignal.service.KeyCachingService"/>
-    <service android:enabled="true" android:name="org.mixedsignals.resignal.service.IncomingMessageObserver$ForegroundService"/>
+    <service android:enabled="true" android:name="org.thoughtcrime.securesms.service.WebRtcCallService"/>
+    <service android:enabled="true" android:name=".service.ApplicationMigrationService"/>
+    <service android:enabled="true" android:exported="false" android:name=".service.KeyCachingService"/>
+    <service android:enabled="true" android:name=".service.IncomingMessageObserver$ForegroundService"/>
 
-    <service android:name="org.mixedsignals.resignal.service.QuickResponseService"
+    <service android:name=".service.QuickResponseService"
              android:permission="android.permission.SEND_RESPOND_VIA_MESSAGE"
              android:exported="true" >
         <intent-filter>
@@ -453,14 +453,14 @@
         </intent-filter>
     </service>
 
-    <service android:name="org.mixedsignals.resignal.service.AccountAuthenticatorService" android:exported="true">
+    <service android:name=".service.AccountAuthenticatorService" android:exported="true">
         <intent-filter>
             <action android:name="android.accounts.AccountAuthenticator" />
         </intent-filter>
         <meta-data android:name="android.accounts.AccountAuthenticator" android:resource="@xml/authenticator" />
     </service>
 
-    <service android:name="org.mixedsignals.resignal.service.ContactsSyncAdapterService" android:exported="true">
+    <service android:name=".service.ContactsSyncAdapterService" android:exported="true">
         <intent-filter>
             <action android:name="android.content.SyncAdapter"/>
         </intent-filter>
@@ -468,22 +468,22 @@
         <meta-data android:name="android.provider.CONTACTS_STRUCTURE" android:resource="@xml/contactsformat" />
     </service>
 
-    <service android:name="org.mixedsignals.resignal.service.DirectShareService"
+    <service android:name=".service.DirectShareService"
              android:permission="android.permission.BIND_CHOOSER_TARGET_SERVICE">
         <intent-filter>
             <action android:name="android.service.chooser.ChooserTargetService" />
         </intent-filter>
     </service>
 
-    <service android:name="org.mixedsignals.resignal.service.GenericForegroundService"/>
+    <service android:name=".service.GenericForegroundService"/>
 
-    <service android:name="org.mixedsignals.resignal.gcm.FcmService">
+    <service android:name=".gcm.FcmService">
         <intent-filter>
             <action android:name="com.google.firebase.MESSAGING_EVENT" />
         </intent-filter>
     </service>
 
-    <receiver android:name="org.mixedsignals.resignal.service.SmsListener"
+    <receiver android:name=".service.SmsListener"
               android:permission="android.permission.BROADCAST_SMS"
               android:enabled="true"
               android:exported="true">
@@ -495,14 +495,14 @@
              </intent-filter>
     </receiver>
 
-    <receiver android:name="org.mixedsignals.resignal.service.SmsDeliveryListener"
+    <receiver android:name=".service.SmsDeliveryListener"
               android:exported="true">
         <intent-filter>
-            <action android:name="org.mixedsignals.resignal.services.MESSAGE_SENT"/>
+            <action android:name="org.thoughtcrime.securesms.services.MESSAGE_SENT"/>
         </intent-filter>
     </receiver>
 
-    <receiver android:name="org.mixedsignals.resignal.service.MmsListener"
+    <receiver android:name=".service.MmsListener"
               android:enabled="true"
               android:exported="true"
               android:permission="android.permission.BROADCAST_WAP_PUSH">
@@ -516,50 +516,50 @@
              </intent-filter>
     </receiver>
 
-    <receiver android:name="org.mixedsignals.resignal.notifications.MarkReadReceiver"
+    <receiver android:name=".notifications.MarkReadReceiver"
               android:enabled="true"
               android:exported="false">
         <intent-filter>
-            <action android:name="org.mixedsignals.resignal.notifications.CLEAR"/>
+            <action android:name="org.thoughtcrime.securesms.notifications.CLEAR"/>
         </intent-filter>
     </receiver>
 
-    <receiver android:name="org.mixedsignals.resignal.notifications.RemoteReplyReceiver"
+    <receiver android:name=".notifications.RemoteReplyReceiver"
               android:enabled="true"
               android:exported="false">
         <intent-filter>
-            <action android:name="org.mixedsignals.resignal.notifications.WEAR_REPLY"/>
+            <action android:name="org.thoughtcrime.securesms.notifications.WEAR_REPLY"/>
         </intent-filter>
     </receiver>
 
-    <receiver android:name="org.mixedsignals.resignal.notifications.AndroidAutoHeardReceiver"
+    <receiver android:name=".notifications.AndroidAutoHeardReceiver"
               android:exported="false">
         <intent-filter>
-          <action android:name="org.mixedsignals.resignal.notifications.ANDROID_AUTO_HEARD"/>
+          <action android:name="org.thoughtcrime.securesms.notifications.ANDROID_AUTO_HEARD"/>
         </intent-filter>
     </receiver>
 
-    <receiver android:name="org.mixedsignals.resignal.notifications.AndroidAutoReplyReceiver"
+    <receiver android:name=".notifications.AndroidAutoReplyReceiver"
               android:exported="false">
         <intent-filter>
-          <action android:name="org.mixedsignals.resignal.notifications.ANDROID_AUTO_REPLY"/>
+          <action android:name="org.thoughtcrime.securesms.notifications.ANDROID_AUTO_REPLY"/>
         </intent-filter>
     </receiver>
 
-    <receiver android:name="org.mixedsignals.resignal.service.ExpirationListener" />
+    <receiver android:name=".service.ExpirationListener" />
 
-    <provider android:name="org.mixedsignals.resignal.providers.PartProvider"
+    <provider android:name=".providers.PartProvider"
               android:grantUriPermissions="true"
               android:exported="false"
-              android:authorities="org.mixedsignals.provider.resignal" />
+              android:authorities="org.thoughtcrime.provider.securesms" />
 
-    <provider android:name="org.mixedsignals.resignal.providers.MmsBodyProvider"
+    <provider android:name=".providers.MmsBodyProvider"
               android:grantUriPermissions="true"
               android:exported="false"
-              android:authorities="org.mixedsignals.provider.resignal.mms" />
+              android:authorities="org.thoughtcrime.provider.securesms.mms" />
 
     <provider android:name="android.support.v4.content.FileProvider"
-              android:authorities="org.mixedsignals.resignal.fileprovider"
+              android:authorities="org.thoughtcrime.securesms.fileprovider"
               android:exported="false"
               android:grantUriPermissions="true">
 
@@ -567,16 +567,16 @@
 
     </provider>
 
-    <provider android:name="org.mixedsignals.resignal.database.DatabaseContentProviders$Conversation"
-              android:authorities="org.mixedsignals.resignal.database.conversation"
+    <provider android:name=".database.DatabaseContentProviders$Conversation"
+              android:authorities="org.thoughtcrime.securesms.database.conversation"
               android:exported="false" />
 
-    <provider android:name="org.mixedsignals.resignal.database.DatabaseContentProviders$ConversationList"
-              android:authorities="org.mixedsignals.resignal.database.conversationlist"
+    <provider android:name=".database.DatabaseContentProviders$ConversationList"
+              android:authorities="org.thoughtcrime.securesms.database.conversationlist"
               android:exported="false" />
 
-    <provider android:name="org.mixedsignals.resignal.database.DatabaseContentProviders$Attachment"
-              android:authorities="org.mixedsignals.resignal.database.attachment"
+    <provider android:name=".database.DatabaseContentProviders$Attachment"
+              android:authorities="org.thoughtcrime.securesms.database.attachment"
               android:exported="false" />
 
     <provider
@@ -585,74 +585,74 @@
               android:exported="false"
               tools:node="remove" />
 
-    <receiver android:name="org.mixedsignals.resignal.service.BootReceiver">
+    <receiver android:name=".service.BootReceiver">
         <intent-filter>
             <action android:name="android.intent.action.BOOT_COMPLETED"/>
-            <action android:name="org.mixedsignals.resignal.RESTART"/>
+            <action android:name="org.thoughtcrime.securesms.RESTART"/>
         </intent-filter>
     </receiver>
 
-    <receiver android:name="org.mixedsignals.resignal.service.DirectoryRefreshListener">
+    <receiver android:name=".service.DirectoryRefreshListener">
         <intent-filter>
             <action android:name="android.intent.action.BOOT_COMPLETED" />
         </intent-filter>
     </receiver>
 
-    <receiver android:name="org.mixedsignals.resignal.service.RotateSignedPreKeyListener">
+    <receiver android:name=".service.RotateSignedPreKeyListener">
         <intent-filter>
             <action android:name="android.intent.action.BOOT_COMPLETED" />
         </intent-filter>
     </receiver>
 
-    <receiver android:name="org.mixedsignals.resignal.service.RotateSenderCertificateListener">
+    <receiver android:name=".service.RotateSenderCertificateListener">
         <intent-filter>
             <action android:name="android.intent.action.BOOT_COMPLETED" />
         </intent-filter>
     </receiver>
 
-    <receiver android:name="org.mixedsignals.resignal.service.LocalBackupListener">
+    <receiver android:name=".service.LocalBackupListener">
         <intent-filter>
             <action android:name="android.intent.action.BOOT_COMPLETED" />
         </intent-filter>
     </receiver>
 
-    <receiver android:name="org.mixedsignals.resignal.service.PersistentConnectionBootListener">
+    <receiver android:name=".service.PersistentConnectionBootListener">
         <intent-filter>
             <action android:name="android.intent.action.BOOT_COMPLETED"/>
         </intent-filter>
     </receiver>
 
-    <receiver android:name="org.mixedsignals.resignal.notifications.LocaleChangedReceiver">
+    <receiver android:name=".notifications.LocaleChangedReceiver">
         <intent-filter>
             <action android:name="android.intent.action.LOCALE_CHANGED"/>
         </intent-filter>
     </receiver>
 
-    <receiver android:name="org.mixedsignals.resignal.notifications.MessageNotifier$ReminderReceiver">
+    <receiver android:name=".notifications.MessageNotifier$ReminderReceiver">
         <intent-filter>
-            <action android:name="org.mixedsignals.resignal.MessageNotifier.REMINDER_ACTION"/>
+            <action android:name="org.thoughtcrime.securesms.MessageNotifier.REMINDER_ACTION"/>
         </intent-filter>
     </receiver>
 
-    <receiver android:name="org.mixedsignals.resignal.notifications.DeleteNotificationReceiver">
+    <receiver android:name=".notifications.DeleteNotificationReceiver">
         <intent-filter>
-            <action android:name="org.mixedsignals.resignal.DELETE_NOTIFICATION"/>
+            <action android:name="org.thoughtcrime.securesms.DELETE_NOTIFICATION"/>
         </intent-filter>
     </receiver>
 
-    <receiver android:name="org.mixedsignals.resignal.ExperienceUpgradeActivity$AppUpgradeReceiver">
+    <receiver android:name=".ExperienceUpgradeActivity$AppUpgradeReceiver">
         <intent-filter>
             <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
             <data android:scheme="package" />
         </intent-filter>
 
         <intent-filter>
-            <action android:name="org.mixedsignals.resignal.ExperienceUpgradeActivity.DISMISS_ACTION"/>
+            <action android:name="org.thoughtcrime.securesms.ExperienceUpgradeActivity.DISMISS_ACTION"/>
         </intent-filter>
     </receiver>
 
     <receiver
-        android:name="org.mixedsignals.resignal.service.PanicResponderListener"
+        android:name=".service.PanicResponderListener"
         android:exported="true">
         <intent-filter>
             <action android:name="info.guardianproject.panic.action.TRIGGER" />
@@ -660,22 +660,22 @@
     </receiver>
 
     <service
-        android:name="org.mixedsignals.resignal.jobmanager.JobSchedulerScheduler$SystemService"
+        android:name=".jobmanager.JobSchedulerScheduler$SystemService"
         android:permission="android.permission.BIND_JOB_SERVICE"
         android:enabled="@bool/enable_job_service"
         tools:targetApi="26" />
 
     <service
-        android:name="org.mixedsignals.resignal.jobmanager.KeepAliveService"
+        android:name=".jobmanager.KeepAliveService"
         android:enabled="@bool/enable_alarm_manager" />
 
     <receiver
-        android:name="org.mixedsignals.resignal.jobmanager.AlarmManagerScheduler$RetryReceiver"
+        android:name=".jobmanager.AlarmManagerScheduler$RetryReceiver"
         android:enabled="@bool/enable_alarm_manager" />
 
     <!-- Probably don't need this one -->
     <receiver
-        android:name="org.mixedsignals.resignal.jobmanager.BootReceiver"
+        android:name=".jobmanager.BootReceiver"
         android:enabled="true">
         <intent-filter>
             <action android:name="android.intent.action.BOOT_COMPLETED" />

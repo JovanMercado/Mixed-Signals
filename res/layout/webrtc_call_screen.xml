@@ -21,7 +21,7 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent">
 
-    <org.mixedsignals.resignal.components.webrtc.PercentFrameLayout
+    <org.thoughtcrime.securesms.components.webrtc.PercentFrameLayout
             android:id="@+id/remote_render_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -182,7 +182,7 @@
 
             </RelativeLayout>
 
-            <org.mixedsignals.resignal.components.webrtc.WebRtcCallControls
+            <org.thoughtcrime.securesms.components.webrtc.WebRtcCallControls
                     android:id="@+id/inCallControls"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -219,7 +219,7 @@
 
     </RelativeLayout>
 
-    <org.mixedsignals.resignal.components.webrtc.PercentFrameLayout
+    <org.thoughtcrime.securesms.components.webrtc.PercentFrameLayout
             android:id="@+id/local_render_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -239,7 +239,7 @@
             tools:visibility="visible"/>
 
 
-    <org.mixedsignals.resignal.components.webrtc.WebRtcAnswerDeclineButton
+    <org.thoughtcrime.securesms.components.webrtc.WebRtcAnswerDeclineButton
             android:id="@+id/answer_decline_button"
             android:layout_gravity="bottom|center"
             android:layout_width="wrap_content"
