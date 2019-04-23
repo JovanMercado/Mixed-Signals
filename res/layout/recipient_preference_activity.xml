@@ -81,7 +81,7 @@
                 android:textColor="@color/textsecure_primary"
                 android:visibility="gone" />
 
-            <org.thoughtcrime.securesms.components.ThreadPhotoRailView
+            <org.mixedsignals.securesms.components.ThreadPhotoRailView
                     android:id="@+id/recent_photos"
                     android:layout_width="match_parent"
                     android:layout_height="90dp"
