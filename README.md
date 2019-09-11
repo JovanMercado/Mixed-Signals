@@ -1,5 +1,7 @@
 # Mixed Signals
 
+THIS PROJECT HAS BEEN CANCELLED. SIGNAL DOES NOT WANT FORKS TO USE NEITHER THE NAME "SIGNAL" NOR OPEN WHISPER'S SERVERS.
+
 Signal is a messaging app for simple private communication with friends.
 This Project aims to bring extra cosmetic features to Signal Private Messenger while keeping the Core of the app intact.
 
